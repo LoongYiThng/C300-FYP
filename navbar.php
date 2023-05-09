@@ -12,7 +12,7 @@
                 <a class="nav-link" href="searchTechniques.php"><i class="fas fa-search"></i>Search Techniques</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.php"><i class="fas fa-phone-alt"></i>About Us</a>
+                <a class="nav-link" href="about.php"><i class="fas fa-phone-alt"></i>About</a>
             </li>
         </ul>
     </div>
