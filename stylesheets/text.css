@@ -31,9 +31,18 @@ img {
 .card:hover {
     box-shadow: 0 0 0 8px deeppink;
 }
-  
-
 
 .container {
     padding: 2px 16px;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: blueviolet !important;
+}
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 90%;
 }
