@@ -3,7 +3,7 @@
 }
 
 body {
-    padding-top: 8%; /* do not remove, this prevents navbar from concealing other elements*/
+    padding-top: 10%; /* do not remove, this prevents navbar from concealing other elements*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000025;
     color: blueviolet;
