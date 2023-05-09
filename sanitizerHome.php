@@ -19,10 +19,8 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <div class="container">
                             <h4><b>upload a text file (.txt)</b></h4>
                             <p>suitable for small files</p>
-                        </div>
                     </div>
                 </div>
                 <div class="col">
