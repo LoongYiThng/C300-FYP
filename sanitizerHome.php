@@ -37,7 +37,6 @@
                             <div class="card-footer">
                                 <label for="textFile" class="btn btn-primary btn-xl">choose file</label>
                                 <input type="file" id="textFile" name="textFile" style="visibility: hidden;">
-                                <p id="textFileSelected">no file selected yet</p>
                             </div>
                         </div>
                     </div>
@@ -102,12 +101,10 @@
 
                 </div>
             </div>
+            <div style="text-align: center">
+                <label class="btn btn-success btn-xl">sanitize</label>
+                <input type="submit" style="visibility: hidden;">
+            </div>
         </form>
     </body>
-    <script>
-        $("#files").change(function() {
-            filename = this.files[0].name;
-            document.getElementById("textFileSelected").innerHTML = filename;
-        });    
-    </script>
 </html>
