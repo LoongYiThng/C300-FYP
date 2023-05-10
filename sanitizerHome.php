@@ -7,6 +7,7 @@
     </head>
     <body>
         <?php include "navbar.php"; ?>
+        
         <form action="doSanitize.php" method="get">
             <h1>Choose how you want to get started</h1>
 
@@ -15,18 +16,21 @@
 
                     <div class="col-md-4">
                         <div class="card h-100">
+                            <i class="fas fa-file-word fa-6x" style="text-align: center;"></i>
                             <h4><b>upload a microsoft word file (.docx)</b></h4>
                             <p>suitable for large files</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
+                            <i class="fas fa-file-alt fa-6x" style="text-align: center;"></i>
                             <h4><b>upload a text file (.txt)</b></h4>
                             <p>suitable for small files</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
+                            <i class="fas fa-paste fa-6x" style="text-align: center;"></i>
                             <h4><b>paste raw text</b></h4>
                             <p>fast and suitable for testing different sanitization techniques or extremely small strings of text</p>
                         </div>
