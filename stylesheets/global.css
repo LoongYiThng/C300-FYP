@@ -1,7 +1,9 @@
+/* navbar */
 .navbar-custom .navbar-brand {
     color: chartreuse;
 }
 
+/* text */
 body {
     padding-top: 10%; /* do not remove, this prevents navbar from concealing other elements*/
     padding-bottom: 5%;
@@ -19,6 +21,7 @@ p {
     color: blueviolet;
 }
 
+/* card */
 .card {
     transition: 0.3s;
     border-radius: 5px;
@@ -33,10 +36,7 @@ img {
     box-shadow: 0 0 0 8px deeppink;
 }
 
-.container {
-    padding: 2px 16px;
-}
-
+/* button */
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: blueviolet !important;
 }
@@ -46,4 +46,9 @@ img {
     font-size: 20px;
     border-radius: 10px;
     width: 90%;
+}
+
+/* container */
+.container {
+    padding: 2px 16px;
 }
