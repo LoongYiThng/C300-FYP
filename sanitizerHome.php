@@ -36,7 +36,7 @@
                             </div>
                             <div class="card-footer">
                                 <label for="textFile" class="btn btn-primary btn-xl">choose file</label>
-                                <input type="file" id="textFile" name="textFile" style="visibility: hidden;">
+                                <input type="file" id="textFile" name="textFile" style="display:none">
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
             </div>
             <div style="text-align: center">
                 <label class="btn btn-success btn-xl">sanitize</label>
-                <input type="submit" style="visibility: hidden;">
+                <input type="submit" style="display: none;">
             </div>
         </form>
     </body>
