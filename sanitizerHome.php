@@ -17,22 +17,41 @@
                     <div class="col-md-4">
                         <div class="card h-100">
                             <i class="fas fa-file-word fa-6x" style="text-align: center;"></i>
-                            <h4><b>upload a microsoft word file (.docx)</b></h4>
-                            <p>suitable for large files</p>
+                            <div class="card-body">
+                                <h4><b>upload a microsoft word file (.docx)</b></h4>
+                                <p>suitable for large files<p>
+                            </div>
+                            <div class="card-footer">
+                                <label  for="wordFile" class="btn btn-primary btn-xl">choose file</label>
+                                <input type="file" id="wordFile" name="wordFile" style="display: none;">
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
                             <i class="fas fa-file-alt fa-6x" style="text-align: center;"></i>
-                            <h4><b>upload a text file (.txt)</b></h4>
-                            <p>suitable for small files</p>
+                            <div class="card-body">
+                                <h4><b>upload a text file (.txt)</b></h4>
+                                <p>suitable for small files</p>
+                            </div>
+                            <div class="card-footer">
+                                <label for="textFile" class="btn btn-primary btn-xl">choose file</label>
+                                <input type="file" id="textFile" name="textFile" style="visibility: hidden;">
+                                <p id="textFileSelected">no file selected yet</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
                             <i class="fas fa-paste fa-6x" style="text-align: center;"></i>
-                            <h4><b>paste raw text</b></h4>
-                            <p>fast and suitable for testing different sanitization techniques or extremely small strings of text</p>
+                            <div class="card-body">
+                                <h4><b>paste raw text</b></h4>
+                                <p>fast and suitable for testing different sanitization techniques or extremely small strings of text</p>
+                            </div>
+                            <div class="card-footer">
+                                <label for="pasteText">paste text here:</label>
+                                <textarea class="form-control" id="pasteText" rows="3"></textarea>
+                            </div>
                         </div>
                     </div>
 
@@ -85,4 +104,10 @@
             </div>
         </form>
     </body>
+    <script>
+        $("#files").change(function() {
+            filename = this.files[0].name;
+            document.getElementById("textFileSelected").innerHTML = filename;
+        });    
+    </script>
 </html>
