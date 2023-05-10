@@ -18,7 +18,7 @@
                         <div class="card h-100">
                             <i class="fas fa-file-word fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
-                                <h4><b>upload a microsoft word file (.docx)</b></h4>
+                                <h2><b>upload a microsoft word file (.docx)</b></h2>
                                 <p>suitable for large files<p>
                             </div>
                             <div class="card-footer">
@@ -31,7 +31,7 @@
                         <div class="card h-100">
                             <i class="fas fa-file-alt fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
-                                <h4><b>upload a text file (.txt)</b></h4>
+                                <h2><b>upload a text file (.txt)</b></h2>
                                 <p>suitable for small files</p>
                             </div>
                             <div class="card-footer">
@@ -44,7 +44,7 @@
                         <div class="card h-100">
                             <i class="fas fa-paste fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
-                                <h4><b>paste raw text</b></h4>
+                                <h2><b>paste raw text</b></h2>
                                 <p>suitable for testing different sanitization techniques or extremely small strings of text</p>
                             </div>
                             <div class="card-footer">
@@ -63,40 +63,40 @@
                 <div class="row gy-3" style="padding: 10px 0px 10px">
 
                     <div class="col-md-6">
-                        <label for="recordSurpression" class="btn btn-primary btn-xl"><input type="checkbox" name="recordSurpression"> record surpression</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="recordSurpression"> record surpression</label>
                     </div>
                     <div class="col-md-6">
-                        <label for="characterMasking" class="btn btn-primary btn-xl"><input type="checkbox" name="characterMasking"> character masking</label>
-                    </div>
-
-                </div>
-                <div class="row gy-3" style="padding: 10px 0px 10px">
-
-                    <div class="col-md-6">
-                        <label for="pseudonymisation" class="btn btn-primary btn-xl"><input type="checkbox" name="pseudonymisation"> pseudonymisation</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="generalisation" class="btn btn-primary btn-xl"><input type="checkbox" name="generalisation"> generalisation</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="characterMasking"> character masking</label>
                     </div>
 
                 </div>
                 <div class="row gy-3" style="padding: 10px 0px 10px">
 
                     <div class="col-md-6">
-                        <label for="swapping" class="btn btn-primary btn-xl"><input type="checkbox" name="swapping"> swapping</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="pseudonymisation"> pseudonymisation</label>
                     </div>
                     <div class="col-md-6">
-                        <label for="dataPerturbation" class="btn btn-primary btn-xl"><input type="checkbox" name="dataPerturbation"> data perturbation</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="generalisation"> generalisation</label>
                     </div>
 
                 </div>
                 <div class="row gy-3" style="padding: 10px 0px 10px">
 
                     <div class="col-md-6">
-                        <label for="dataAggregation" class="btn btn-primary btn-xl"><input type="checkbox" name="dataAggregation"> data aggregation</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="swapping"> swapping</label>
                     </div>
                     <div class="col-md-6">
-                        <label for="syntheticData" class="btn btn-primary btn-xl"><input type="checkbox" name="syntheticData"> synthetic data</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="dataPerturbation"> data perturbation</label>
+                    </div>
+
+                </div>
+                <div class="row gy-3" style="padding: 10px 0px 10px">
+
+                    <div class="col-md-6">
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="dataAggregation"> data aggregation</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="syntheticData"> synthetic data</label>
                     </div>
 
                 </div>
