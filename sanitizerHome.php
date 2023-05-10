@@ -23,7 +23,7 @@
                             </div>
                             <div class="card-footer">
                                 <label  for="wordFile" class="btn btn-primary btn-xl">choose file</label>
-                                <input type="file" id="wordFile" name="wordFile" style="display: none;">
+                                <input type="file" id="wordFile" name="wordFile" accept=".docx" style="display: none;">
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             </div>
                             <div class="card-footer">
                                 <label for="textFile" class="btn btn-primary btn-xl">choose file</label>
-                                <input type="file" id="textFile" name="textFile" style="display:none">
+                                <input type="file" id="textFile" name="textFile" accept=".txt" style="display:none">
                             </div>
                         </div>
                     </div>
