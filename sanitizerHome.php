@@ -9,7 +9,7 @@
         <?php include "navbar.php"; ?>
         
         <form action="doSanitize.php" method="get">
-            <h1>Choose how you want to get started</h1>
+            <h1><strong>Choose how you want to get started</strong></h1>
 
             <div class="container" style="padding: 50px 0px 50px">
                 <div class="row gy-3">
@@ -18,7 +18,7 @@
                         <div class="card h-100">
                             <i class="fas fa-file-word fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
-                                <h2><b>upload a microsoft word file (.docx)</b></h2>
+                                <h2><strong>upload a microsoft word file (.docx)</strong></h2>
                                 <p>suitable for large files<p>
                             </div>
                             <div class="card-footer">
@@ -31,7 +31,7 @@
                         <div class="card h-100">
                             <i class="fas fa-file-alt fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
-                                <h2><b>upload a text file (.txt)</b></h2>
+                                <h2><strong>upload a text file (.txt)</strong></h2>
                                 <p>suitable for small files</p>
                             </div>
                             <div class="card-footer">
@@ -44,7 +44,7 @@
                         <div class="card h-100">
                             <i class="fas fa-paste fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
-                                <h2><b>paste raw text</b></h2>
+                                <h2><strong>paste raw text</strong></h2>
                                 <p>suitable for testing different sanitization techniques or extremely small strings of text</p>
                             </div>
                             <div class="card-footer">
@@ -57,7 +57,10 @@
                 </div>
             </div>
 
-            <h1>Select a technique</h1>
+            <h1><strong>Select a technique</strong></h1>
+            <h2 style="text-align: center;">you may choose one or more techniques for sanitization.</h2>
+            <p>if you are not sure about which techniques to choose or how they work, try testing them some sample input to the raw text field above.
+                or read more on a techniques documentation here</p>
 
             <div class="container" style="padding: 50px 0px 50px">
                 <div class="row gy-3" style="padding: 10px 0px 10px">
