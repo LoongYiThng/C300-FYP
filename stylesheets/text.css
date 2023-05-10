@@ -1,0 +1,49 @@
+.navbar-custom .navbar-brand {
+    color: chartreuse;
+}
+
+body {
+    padding-top: 10%; /* do not remove, this prevents navbar from concealing other elements*/
+    padding-bottom: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000025;
+    color: blueviolet;
+}
+
+h1 {
+    color: chartreuse;
+    text-align: center;
+}
+
+p {
+    color: blueviolet;
+}
+
+.card {
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: #000025;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 8px deeppink;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: blueviolet !important;
+}
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
