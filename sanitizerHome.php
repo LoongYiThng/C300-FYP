@@ -45,7 +45,7 @@
                             <i class="fas fa-paste fa-6x" style="text-align: center;"></i>
                             <div class="card-body">
                                 <h4><b>paste raw text</b></h4>
-                                <p>fast and suitable for testing different sanitization techniques or extremely small strings of text</p>
+                                <p>suitable for testing different sanitization techniques or extremely small strings of text</p>
                             </div>
                             <div class="card-footer">
                                 <label for="pasteText">paste text here:</label>
