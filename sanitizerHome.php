@@ -22,7 +22,7 @@
                                 <p>suitable for large files<p>
                             </div>
                             <div class="card-footer">
-                                <label  for="wordFile" class="btn btn-primary btn-xl">choose file</label>
+                                <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose file</label>
                                 <input type="file" id="wordFile" name="wordFile" accept=".docx" style="display: none;">
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                                 <p>suitable for small files</p>
                             </div>
                             <div class="card-footer">
-                                <label for="textFile" class="btn btn-primary btn-xl">choose file</label>
+                                <label for="textFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose file</label>
                                 <input type="file" id="textFile" name="textFile" accept=".txt" style="display:none">
                             </div>
                         </div>
