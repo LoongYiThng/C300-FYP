@@ -1,3 +1,4 @@
+/* for big header at top */
 div.bigHeader {
     border-width: 5px;
     border-bottom: 5px solid deeppink;
@@ -5,12 +6,13 @@ div.bigHeader {
     margin: 0px 0px 80px 0px;
 }
 
-p {
-    margin: 10px 20px 35px 20px;
-}
-
 div.bigHeader h2 {
     color: blueviolet;
+}
+
+/* for rest of text */
+p {
+    margin: 10px 20px 35px 20px;
 }
 
 h2 {
