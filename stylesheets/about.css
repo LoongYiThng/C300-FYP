@@ -1,6 +1,6 @@
-div.margin {
-    border-style: solid;
+div.box {
     border-width: 5px;
     border-bottom: 5px solid deeppink;
     border-radius: 5px;
+    margin: 0px 0px 50px 0px;
 }

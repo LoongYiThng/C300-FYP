@@ -9,7 +9,7 @@
     <body>
         <?php include "navbar.php"; ?>
 
-        <div class="margin">
+        <div class="box">
             <h1>Purpose</h1>
             <p><h2 style="text-align: center;">To automate data sanitizing through the use of scripts or web application</h2></p>
         </div>
