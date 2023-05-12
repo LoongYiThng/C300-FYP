@@ -1,6 +1,19 @@
-div.box {
+div.bigHeader {
     border-width: 5px;
     border-bottom: 5px solid deeppink;
     border-radius: 5px;
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 80px 0px;
+}
+
+p {
+    margin: 10px 20px 35px 20px;
+}
+
+div.bigHeader h2 {
+    color: blueviolet;
+}
+
+h2 {
+    color: chartreuse;
+    text-align: center;
 }

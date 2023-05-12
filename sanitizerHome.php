@@ -59,8 +59,10 @@
 
             <h1><strong>Select a technique</strong></h1>
             <h2 style="text-align: center;">you may choose one or more techniques for sanitization.</h2>
-            <p>if you are not sure about which techniques to choose or how they work, try testing them some sample input to the raw text field above.
-                or read more on a techniques documentation here</p>
+            <p style="margin: 0px 20px 0px 20px;">
+                if you are not sure about which techniques to choose or how they work, try testing them some sample input to the raw text field above.
+                or read more on a techniques documentation here
+            </p>
 
             <div class="container" style="padding: 50px 0px 50px">
                 <div class="row gy-3" style="padding: 10px 0px 10px">
