@@ -33,8 +33,8 @@
         <h2>About us</h2>
         <p>
             this web application was created by a group of RP students as a first year project you may contact us by <br>
-            mail: <a href="mailto:21005024@myrp.edu.sg">21005024@myrp.edu.sg</a><br>
-            phone: (+65) 8282 9084
+            <i class="fas fa-envelope"></i> mail: <a href="mailto:21005024@myrp.edu.sg">21005024@myrp.edu.sg</a><br>
+            <i class="fas fa-phone"></i> phone: (+65) 8282 9084
         </p>
         
     </body>
