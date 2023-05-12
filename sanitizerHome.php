@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>home</title>
         <?php include "design.php"; ?>
+        <link rel="stylesheet" href="stylesheets/sanitizerHome.css">
     </head>
     <body>
         <?php include "navbar.php"; ?>
@@ -11,7 +12,7 @@
         <form action="doSanitize.php" method="get">
             <h1><strong>Choose how you want to get started</strong></h1>
 
-            <div class="container" style="padding: 50px 0px 50px">
+            <div class="container">
                 <div class="row gy-3">
 
                     <div class="col-md-4">
@@ -64,7 +65,7 @@
                 or read more on a techniques documentation here
             </p>
 
-            <div class="container" style="padding: 50px 0px 50px">
+            <div class="container">
                 <div class="row gy-3" style="padding: 10px 0px 10px">
 
                     <div class="col-md-6">
