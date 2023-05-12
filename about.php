@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <title>about us</title>
         <?php include "design.php"; ?>
-        <link rel="stylesheet" href="/htdocs/C300-FYP/stylesheets/about.css">
+        <link rel="stylesheet" href="stylesheets/about.css">
     </head>
     <body>
         <?php include "navbar.php"; ?>
 
         <div class="margin">
             <h1>Purpose</h1>
-            <p style="text-align: center;"><h2>To automate data sanitizing through the use of scripts or web application</h2></p>
+            <h2 style="text-align: center;">To automate data sanitizing through the use of scripts or web application</h2>
         </div>
 
         <h1>How it works</h1>
