@@ -7,15 +7,15 @@ div.bigHeader {
 }
 
 div.bigHeader h2 {
-    color: blueviolet;
+    color: mediumpurple;
 }
 
 /* for rest of text */
-p {
-    margin: 10px 20px 35px 20px;
-}
-
 h2 {
     color: chartreuse;
     text-align: center;
+}
+
+p {
+    margin: 10px 20px 35px 20px;
 }
