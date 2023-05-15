@@ -66,7 +66,7 @@
             </p>
 
             <div class="container">
-                <div class="row gy-3" style="padding: 10px 0px 10px">
+                <div class="row gy-3">
 
                     <div class="col-md-6">
                         <label class="btn btn-primary btn-xl"><input type="checkbox" name="recordSurpression"> Record surpression</label>
@@ -76,7 +76,7 @@
                     </div>
 
                 </div>
-                <div class="row gy-3" style="padding: 10px 0px 10px">
+                <div class="row gy-3">
 
                     <div class="col-md-6">
                         <label class="btn btn-primary btn-xl"><input type="checkbox" name="pseudonymisation"> Pseudonymisation</label>
@@ -86,7 +86,7 @@
                     </div>
 
                 </div>
-                <div class="row gy-3" style="padding: 10px 0px 10px">
+                <div class="row gy-3">
 
                     <div class="col-md-6">
                         <label class="btn btn-primary btn-xl"><input type="checkbox" name="swapping"> Swapping</label>
@@ -96,7 +96,7 @@
                     </div>
 
                 </div>
-                <div class="row gy-3" style="padding: 10px 0px 10px">
+                <div class="row gy-3">
 
                     <div class="col-md-6">
                         <label class="btn btn-primary btn-xl"><input type="checkbox" name="dataAggregation"> Data Aggregation</label>
