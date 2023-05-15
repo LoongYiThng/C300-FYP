@@ -15,6 +15,7 @@
         </div>
 
         <h2>How it works</h2>
+        <img src="images/how it works.png" alt="how it works">
         <p>
             it starts with you, the user of the application uploading a document to the website to out the website. currently 
             we support word files text files and typing arbitrary text. once that is done all you need to do is choose one or 
