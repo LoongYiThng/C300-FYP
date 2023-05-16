@@ -5,8 +5,8 @@
 
 /* text */
 body {
-    padding-top: 10%; /* do not remove, this prevents navbar from concealing other elements*/
-    padding-bottom: 5%;
+    margin-top: 10%; /* do not remove, this prevents navbar from concealing other elements*/
+    margin-bottom: 5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000025;
     color: mediumpurple;
@@ -46,9 +46,4 @@ div.card-body h2{
     font-size: 20px;
     border-radius: 10px;
     width: 90%;
-}
-
-/* container */
-.container {
-    padding: 2px 16px;
 }
