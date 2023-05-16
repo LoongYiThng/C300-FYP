@@ -31,6 +31,44 @@
             simpler succinct explanations, we do have documentation attached to each technique listed in the "search techniques" 
             tab of the navigation bar at the very top of your screen. 
         </p>
+        <div class="container">
+            <div class="row gy-3">
+
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <i class="fas fa-user fa-6x" style="text-align: center;"></i>
+                        <div class="card-body">
+                            <h3><strong>Download user documentation</strong></h3>
+                            <p>Contains explanations on inner working of the website and all features and functions of the website<p>
+                        </div>
+                        <div class="card-footer">
+                            <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose file</label>
+                            <input type="file" id="wordFile" name="wordFile" accept=".docx" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <i class="fas fa-tools fa-6x" style="text-align: center;"></i>
+                        <div class="card-body">
+                            <h3><strong>Download technique documentation</strong></h3>
+                            <p>Contains detailed documentation about different sanitization techniques and how they work in the web application<p>
+                        </div>
+                        <div class="card-footer">
+                            <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose file</label>
+                            <input type="file" id="wordFile" name="wordFile" accept=".docx" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        
+        
+
+
         <p>
             If you still need help you may refer to the next section for methods of contacting us, we are reachable in any of the contacts provided and 
             will respond in at least 3 working days.
