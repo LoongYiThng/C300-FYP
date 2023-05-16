@@ -17,7 +17,7 @@
 
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <i class="fas fa-file-word fa-6x" style="text-align: center;"></i>
+                            <i class="fas fa-file-word fa-6x"></i>
                             <div class="card-body">
                                 <h2><strong>Upload a microsoft word file (.docx)</strong></h2>
                                 <p>Suitable for large files<p>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <i class="fas fa-file-alt fa-6x" style="text-align: center;"></i>
+                            <i class="fas fa-file-alt fa-6x"></i>
                             <div class="card-body">
                                 <h2><strong>Upload a text file (.txt)</strong></h2>
                                 <p>Suitable for small files</p>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <i class="fas fa-paste fa-6x" style="text-align: center;"></i>
+                            <i class="fas fa-paste fa-6x"></i>
                             <div class="card-body">
                                 <h2><strong>Paste raw text</strong></h2>
                                 <p>Suitable for testing different sanitization techniques or extremely small strings of text</p>
