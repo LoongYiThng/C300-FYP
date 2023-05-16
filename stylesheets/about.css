@@ -10,7 +10,15 @@ div.bigHeader h2 {
     color: mediumpurple;
 }
 
-/* for rest of text */
+/* image styles */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* styles for rest of text */
 h2 {
     color: chartreuse;
     text-align: center;
@@ -20,10 +28,4 @@ p {
     margin: 10px 20px 35px 20px;
 }
 
-/* image styles */
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
+/* centre all buttons on this page */

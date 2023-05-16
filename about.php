@@ -26,10 +26,12 @@
 
         <h2>To find out more</h2>
         <p>
-            If you have any further questions about the inner workings of this website be sure to check out our documentation 
-            here. If you have any questions about the sanitization techniques you may find them here, for simpler explanations, 
-            we do have documentation attached to each technique listed in the search techniques tab of the navigation bar at the 
-            very top of your screen. 
+            If you have any further questions about the inner workings of this website be sure to download and check our 
+            documentation below. If you have any questions about the sanitization techniques you may find them below as well, for 
+            simpler succinct explanations, we do have documentation attached to each technique listed in the "search techniques" 
+            tab of the navigation bar at the very top of your screen. 
+        </p>
+        <p>
             If you still need help you may refer to the next section for methods of contacting us, we are reachable in any of the contacts provided and 
             will respond in at least 3 working days.
         </p>
