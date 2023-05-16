@@ -32,7 +32,11 @@ img {
     box-shadow: 0 0 0 8px deeppink;
 }
 
-div.card-body h2{
+div.card-body h2,h3{
+    text-align: center;
+}
+
+div.card i {
     text-align: center;
 }
 
