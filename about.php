@@ -77,7 +77,7 @@
         </div>
         <p>
             If you still need help you may refer to the next section for methods of contacting us, we are reachable in any of the 
-            contacts provided and will respond in at least 3 working days.
+            contacts provided in the section below and will respond in at least 3 working days.
         </p>
 
         <h2>About us</h2>
