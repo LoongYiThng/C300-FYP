@@ -39,9 +39,14 @@
                         <i class="fas fa-user fa-6x"></i>
                         <div class="card-body">
                             <h3><strong>Download user documentation</strong></h3>
-                            <p>
-                                Contains explanations on inner working of the website and all features and functions of the website
-                            <p>
+                            Contains all explanations on the inner working of the website such as:
+                            <ol>
+                                <li>low level operations</li>
+                                <li>application architecture</li>
+                                <li>user privacy</li>
+                                <li>navigating the website</li>
+                                <li>technologies used by website</li>
+                            </ol>
                         </div>
                         <div class="card-footer">
                             <a class="btn btn-primary btn-xl" role="button" href="downloads/user documentation.docx" download><i class="fas fa-download"></i> download</a>
@@ -53,10 +58,14 @@
                         <i class="fas fa-tools fa-6x"></i>
                         <div class="card-body">
                             <h3><strong>Download technique documentation</strong></h3>
-                            <p>
-                                Contains detailed documentation about different sanitization techniques and how they work in the 
-                                web application
-                            <p>
+                            Contains highly detailed explanations about all available techniques such as:
+                            <ol>
+                                <li>how the technique works</li>
+                                <li>low level technique implementation</li>
+                                <li>technique integration into website</li>
+                                <li>storage of techniques</li>
+                                <li>technologies used by techniques</li>
+                            </ol>
                         </div>
                         <div class="card-footer">
                             <a class="btn btn-primary btn-xl" role="button" href="downloads/techniques documentation.docx" download><i class="fas fa-download"></i> download</a>
