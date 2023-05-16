@@ -9,16 +9,12 @@ body {
     margin-bottom: 5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000025;
-    color: blueviolet;
+    color: mediumpurple;
 }
 
 h1 {
     color: chartreuse;
     text-align: center;
-}
-
-p {
-    margin: 0 20px 0;
 }
 
 /* card */
@@ -36,9 +32,13 @@ img {
     box-shadow: 0 0 0 8px deeppink;
 }
 
+div.card-body h2{
+    text-align: center;
+}
+
 /* button */
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: blueviolet !important;
+    background-color: blueviolet;
 }
 
 .btn-xl {
