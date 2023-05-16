@@ -42,8 +42,8 @@
                             <p>Contains explanations on inner working of the website and all features and functions of the website<p>
                         </div>
                         <div class="card-footer">
-                            <label  for="userDocs" class="btn btn-primary btn-xl"><i class="fas fa-download"></i> download</label>
-                            
+                            <label for="userDocs" class="btn btn-primary btn-xl"><i class="fas fa-download"></i> download</label>
+                            <a href="downloads/user documentation.docx" download></a>
                         </div>
                     </div>
                 </div>
@@ -55,8 +55,8 @@
                             <p>Contains detailed documentation about different sanitization techniques and how they work in the web application<p>
                         </div>
                         <div class="card-footer">
-                            <label  for="techniqueDocs" class="btn btn-primary btn-xl"><i class="fas fa-download"></i> download</label>
-                            
+                            <label for="techniqueDocs" class="btn btn-primary btn-xl"><i class="fas fa-download"></i> download</label>
+                            <a href="downloads/techniques documentation.docx" download></a>
                         </div>
                     </div>
                 </div>
