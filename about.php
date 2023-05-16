@@ -27,8 +27,9 @@
         <h2>To find out more</h2>
         <p>
             If you have any further questions about the inner workings of this website be sure to check out our documentation 
-            here. If you still need help you may refer to the next section for methods of contacting us, we are reachable in any 
-            of the contacts provided and will respond in at least 3 working days.
+            here. If you have any questions about the sanitization techniques you may find them here. If you still need help 
+            you may refer to the next section for methods of contacting us, we are reachable in any of the contacts provided and 
+            will respond in at least 3 working days.
         </p>
 
         <h2>About us</h2>
