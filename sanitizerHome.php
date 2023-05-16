@@ -107,6 +107,7 @@
 
                 </div>
             </div>
+            
             <div style="text-align: center">
                 <label for="submit" class="btn btn-success btn-xl">Sanitize</label>
                 <input type="submit" id="submit" style="display: none;">
