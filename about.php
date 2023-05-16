@@ -39,11 +39,12 @@
                         <i class="fas fa-user fa-6x"></i>
                         <div class="card-body">
                             <h3><strong>Download user documentation</strong></h3>
-                            <p>Contains explanations on inner working of the website and all features and functions of the website<p>
+                            <p>
+                                Contains explanations on inner working of the website and all features and functions of the website
+                            <p>
                         </div>
                         <div class="card-footer">
-                            <label for="userDocs" class="btn btn-primary btn-xl"><i class="fas fa-download"></i> download</label>
-                            <a href="downloads/user documentation.docx" download></a>
+                            <a class="btn btn-primary btn-xl" role="button" href="downloads/user documentation.docx" download><i class="fas fa-download"></i> download</a>
                         </div>
                     </div>
                 </div>
@@ -52,23 +53,19 @@
                         <i class="fas fa-tools fa-6x"></i>
                         <div class="card-body">
                             <h3><strong>Download technique documentation</strong></h3>
-                            <p>Contains detailed documentation about different sanitization techniques and how they work in the web application<p>
+                            <p>
+                                Contains detailed documentation about different sanitization techniques and how they work in the 
+                                web application
+                            <p>
                         </div>
                         <div class="card-footer">
-                            <label for="techniqueDocs" class="btn btn-primary btn-xl"><i class="fas fa-download"></i> download</label>
-                            <a href="downloads/techniques documentation.docx" download></a>
+                            <a class="btn btn-primary btn-xl" role="button" href="downloads/techniques documentation.docx" download><i class="fas fa-download"></i> download</a>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-
-
-        
-        
-
-
         <p>
             If you still need help you may refer to the next section for methods of contacting us, we are reachable in any of the 
             contacts provided and will respond in at least 3 working days.
