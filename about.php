@@ -41,11 +41,11 @@
                             <h3><strong>Download user documentation</strong></h3>
                             Contains all explanations on the inner working of the website such as:
                             <ol>
-                                <li>low level operations</li>
-                                <li>application architecture</li>
-                                <li>user privacy</li>
-                                <li>navigating the website</li>
-                                <li>technologies used by website</li>
+                                <li>Low level operations</li>
+                                <li>Application architecture</li>
+                                <li>User privacy</li>
+                                <li>Navigating the website</li>
+                                <li>Technologies used by website</li>
                             </ol>
                         </div>
                         <div class="card-footer">
@@ -60,11 +60,11 @@
                             <h3><strong>Download technique documentation</strong></h3>
                             Contains highly detailed explanations about all available techniques such as:
                             <ol>
-                                <li>how the technique works</li>
-                                <li>low level technique implementation</li>
-                                <li>technique integration into website</li>
-                                <li>storage of techniques</li>
-                                <li>technologies used by techniques</li>
+                                <li>How the technique works</li>
+                                <li>Low level technique implementation</li>
+                                <li>Technique integration into website</li>
+                                <li>Storage of techniques</li>
+                                <li>Technologies used by techniques</li>
                             </ol>
                         </div>
                         <div class="card-footer">
