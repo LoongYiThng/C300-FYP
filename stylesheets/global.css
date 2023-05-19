@@ -41,8 +41,14 @@ div.card i {
 }
 
 /* button */
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: blueviolet;
+}
+
+.btn:hover {
+    background-color: deeppink;
+    color: chartreuse;
+
 }
 
 .btn-xl {
