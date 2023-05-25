@@ -32,7 +32,7 @@ img {
     box-shadow: 0 0 0 8px deeppink;
 }
 
-div.card-body h2{
+div.card-body h2,h3 {
     text-align: center;
 }
 
@@ -41,8 +41,14 @@ div.card i {
 }
 
 /* button */
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: blueviolet;
+}
+
+.btn:hover {
+    background-color: deeppink;
+    color: chartreuse;
+
 }
 
 .btn-xl {
