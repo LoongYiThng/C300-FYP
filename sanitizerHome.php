@@ -50,7 +50,7 @@
                             </div>
                             <div class="card-footer">
                                 <label for="pasteText">paste text here:</label>
-                                <textarea class="form-control" id="pasteText" rows="3"></textarea>
+                                <textarea class="form-control" id="pasteText" name="pasteText" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
