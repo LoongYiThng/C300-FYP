@@ -9,8 +9,8 @@
 
 ## details
 
-**project details:** To automate data sanitizing by using of scripts or webapp  
-**motivation and benefits:** To adhere to the PDPA, sensitive data must be sanitized by removing sensitive data before sharing or process further with other parties. Having such tool will benefit any data owner to automate data sanitizing quickly and efficiently  
+**project details:** To automate data sanitizing through the use of scripts or webapp  
+**motivation and benefits:** To adhere to the PDPA, sensitive data must be sanitized by removing sensitive data before sharing or further processing with other parties. Having such a tool will benefit any data owner to automate data sanitizing quickly and efficiently  
 
 ## equipment and skills required for this project
 
