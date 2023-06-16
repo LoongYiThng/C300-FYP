@@ -49,7 +49,7 @@
                             </ol>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-primary btn-xl" role="button" href="downloads/user documentation.docx" download><i class="fas fa-download"></i> download</a>
+                            <a class="btn btn-primary btn-xl" role="button" href="downloads/user_documentation.docx" download><i class="fas fa-download"></i> download</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             </ol>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-primary btn-xl" role="button" href="downloads/techniques documentation.docx" download><i class="fas fa-download"></i> download</a>
+                            <a class="btn btn-primary btn-xl" role="button" href="downloads/techniques_documentation.docx" download><i class="fas fa-download"></i> download</a>
                         </div>
                     </div>
                 </div>
