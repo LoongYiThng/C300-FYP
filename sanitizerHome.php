@@ -20,10 +20,10 @@
                             <i class="fas fa-file-word fa-6x"></i>
                             <div class="card-body">
                                 <h2><strong>Upload a microsoft word file (.docx)</strong></h2>
-                                <p>Suitable for large files<p>
+                                <p>Suitable for large microsoft documents<p>
                             </div>
                             <div class="card-footer">
-                                <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose file</label>
+                                <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose docx file</label>
                                 <input type="file" id="wordFile" name="wordFile" accept=".docx" style="display: none;">
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                 <p>Suitable for small files</p>
                             </div>
                             <div class="card-footer">
-                                <label for="textFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose file</label>
+                                <label for="textFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose txt file</label>
                                 <input type="file" id="textFile" name="textFile" accept=".txt" style="display:none">
                             </div>
                         </div>
@@ -54,9 +54,37 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+
+            <div class="container">
+                <div class="row gy-3">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <i class="fas fa-file-pdf fa-6x"></i>
+                            <div class="card-body">
+                                <h2><strong>Upload a PDF file (.pdf)</strong></h2>
+                                <p>Suitable for large pdf files</p>
+                            </div>
+                            <div class="card-footer">
+                                <label for="pdfFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose pdf file</label>
+                                <input type="pdfFile" id="pdfFile" name="pdfFile" accept=".pdf" style="display:none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                        <i class="fas fa-file-excel fa-6x"></i>
+                            <div class="card-body">
+                                <h2><strong>Upload a excel file (.xlsx)</strong></h2>
+                                <p>Suitable for excel spreadsheet</p>
+                            </div>
+                            <div class="card-footer">
+                                <label for="pdfFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose xlsx file</label>
+                                <input type="excelFile" id="excelFile" name="textFile" accept=".xlsx" style="display:none">
+                            </div>
+                        </div>
+                    </div>
 
             <h1><strong>Select a technique</strong></h1>
             <h2 style="text-align: center;">You may choose one or more techniques for sanitization.</h2>
@@ -97,13 +125,13 @@
                 <?php
                 }
 
-                foreach ($spreadsheet as $technique) {
+                foreach ($spreadsheet as $techniqueGroup) {
                 ?>
                 <div class="row" id="spreadsheetTechniques">
 
                     <div class="col-md-12">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[0][0]?>">
-                        <?php echo $techniqueGroup[0][1]?></label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[0]?>">
+                        <?php echo $techniqueGroup[1]?></label>
                     </div>
 
                 </div>
