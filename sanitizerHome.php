@@ -12,7 +12,7 @@
         <form action="doSanitize.php" method="get">
             <h1><strong>Choose how you want to get started</strong></h1>
 
-            <div class="container" id="fileFormatsContainer">
+            <div class="container">
                 <div class="row gy-3">
 
                     <div class="col-md-4">
@@ -67,22 +67,43 @@
                 here. 
             </p>
 
-            <div class="container" id="techniquesContainer">
+            <div class="container">
                 <?php
-                $language=array("character masking", "synthetic data", "data perturbation", "record surpression", "generalisation",
-                "pseudonymisation", "swapping", "attribute surpression");
-                $spreadsheet=array("data aggregation");
-                
-                foreach ($language as $technique) {
-                ?>
-                
-                <div class="row gy-3">
+                $language=array(
+                    array(array("characterMasking", "Character masking"), array("syntheticData", "Synthetic data")),
+                    array(array("dataPerturbation", "Data perturbation"), array("recordSurpression", "Record surpression")),
+                    array(array("generalisation", "Generalisation"), array("pseudonymisation", "Pseudonymisation")),
+                    array(array("swapping", "Swapping"), array("attributeSurpression ", "Attribute surpression")),
+                );
+                $spreadsheet=array(
+                    array("data aggregation", "Data aggregation")
+                );
 
+                # these will loop break on an odd number of techniques in future
+                foreach ($language as $techniqueGroup) {
+                ?>
+                <div class="row gy-3" id="languageTechniques">
+                    
                     <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="recordSurpression"> Record surpression</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[0][0]?>">
+                        <?php echo $techniqueGroup[0][1]?></label>
                     </div>
                     <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="characterMasking"> Character masking</label>
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[1][0]?>">
+                        <?php echo $techniqueGroup[1][1] ?></label>
+                    </div>
+
+                </div>
+                <?php
+                }
+
+                foreach ($spreadsheet as $technique) {
+                ?>
+                <div class="row" id="spreadsheetTechniques">
+
+                    <div class="col-md-12">
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[0][0]?>">
+                        <?php echo $techniqueGroup[0][1]?></label>
                     </div>
 
                 </div>
