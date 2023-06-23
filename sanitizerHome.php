@@ -12,7 +12,7 @@
         <form action="doSanitize.php" method="get">
             <h1><strong>Choose how you want to get started</strong></h1>
 
-            <div class="container">
+            <div class="container" id="fileFormatsContainer">
                 <div class="row gy-3">
 
                     <div class="col-md-4">
@@ -61,11 +61,21 @@
             <h1><strong>Select a technique</strong></h1>
             <h2 style="text-align: center;">You may choose one or more techniques for sanitization.</h2>
             <p style="margin: 0px 20px 0px 20px;">
-                If you are not sure about which techniques to choose or how they work, try testing them some sample input to the 
-                raw text field above or read more on the technique documentation here
+                <b>This section changes depending on your chosen file format above</b>. This is because different data types have 
+                their own applicable sanitization techniques. If you are not sure about which techniques to choose or how they 
+                work, try testing them some sample input to the raw text field above or read more on the technique documentation 
+                here. 
             </p>
 
-            <div class="container">
+            <div class="container" id="techniquesContainer">
+                <?php
+                $language=array("character masking", "synthetic data", "data perturbation", "record surpression", "generalisation",
+                "pseudonymisation", "swapping", "attribute surpression");
+                $spreadsheet=array("data aggregation");
+                
+                foreach ($language as $technique) {
+                ?>
+                
                 <div class="row gy-3">
 
                     <div class="col-md-6">
@@ -76,36 +86,7 @@
                     </div>
 
                 </div>
-                <div class="row gy-3">
-
-                    <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="pseudonymisation"> Pseudonymisation</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="generalisation"> Generalisation</label>
-                    </div>
-
-                </div>
-                <div class="row gy-3">
-
-                    <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="swapping"> Swapping</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="dataPerturbation"> Data Perturbation</label>
-                    </div>
-
-                </div>
-                <div class="row gy-3">
-
-                    <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="dataAggregation"> Data Aggregation</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="syntheticData"> Synthetic Data</label>
-                    </div>
-
-                </div>
+                <?php } ?>
             </div>
             
             <div style="text-align: center">
@@ -113,5 +94,7 @@
                 <input type="submit" id="submit" style="display: none;">
             </div>
         </form>
+        
+        <script src="javascript/sanitizerHome.js"></script>
     </body>
 </html>
