@@ -85,7 +85,9 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+            
             <h1><strong>Select a technique</strong></h1>
             <h2 style="text-align: center;">You may choose one or more techniques for sanitization.</h2>
             <p style="margin: 0px 20px 0px 20px;">
