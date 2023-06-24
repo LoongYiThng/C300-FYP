@@ -55,10 +55,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="container">
                 <div class="row gy-3">
+                    
                     <div class="col-md-6">
                         <div class="card h-100">
                             <i class="fas fa-file-pdf fa-6x"></i>
@@ -85,6 +83,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             
