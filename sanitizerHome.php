@@ -10,6 +10,8 @@
         <?php include "navbar.php"; ?>
         
         <form enctype="multipart/form-data" action="doSanitize.php" method="post">
+            <input type="hidden" name="MAX_FILE_SIZE" value="500000000" />
+            
             <h1><strong>Choose how you want to get started</strong></h1>
 
             <div class="container">
@@ -24,7 +26,7 @@
                             </div>
                             <div class="card-footer">
                                 <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"> </i> choose docx file</label>
-                                <input type="file" id="wordFile" name="file" accept=".docx" style="display: none;">
+                                <input type="file" id="wordFile" name="file" accept=".docx" style="display: none">
                                 <input type="hidden" id="wordFile" name="extension" value=".docx">
                             </div>
                         </div>
@@ -38,7 +40,7 @@
                             </div>
                             <div class="card-footer">
                                 <label for="textFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose txt file</label>
-                                <input type="file" id="textFile" name="file" accept=".txt" style="display:none">
+                                <input type="file" id="textFile" name="file" accept=".txt" style="display: none">
                                 <input type="hidden" id="textFile" name="extension" value=".txt">
                             </div>
                         </div>
@@ -68,7 +70,7 @@
                             </div>
                             <div class="card-footer">
                                 <label for="pdfFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose pdf file</label>
-                                <input type="file" id="pdfFile" name="file" accept=".pdf" style="display:none">
+                                <input type="file" id="pdfFile" name="file" accept=".pdf" style="display: none">
                                 <input type="hidden" id="pdfFile" name="extension" value=".pdf">
                             </div>
                         </div>
@@ -82,7 +84,7 @@
                             </div>
                             <div class="card-footer">
                                 <label for="excelFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose xlsx file</label>
-                                <input type="file" id="excelFile" name="file" accept=".xlsx" style="display:none">
+                                <input type="file" id="excelFile" name="file" accept=".xlsx" style="display: none">
                                 <input type="hidden" id="excelFile" name="extension" value=".xlsx">
                             </div>
                         </div>
@@ -128,7 +130,7 @@
                 foreach ($language as $techniqueGroup) {
                 ?>
 
-                <div class="row gy-3" id="languageTechniques" style="display: none;">
+                <div class="row gy-3" id="languageTechniques" style="display: none">
                     
                     <div class="col-md-6">
                         <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[0][0]?>">
@@ -147,7 +149,7 @@
                 foreach ($spreadsheet as $techniqueGroup) {
                 ?>
 
-                <div class="row gy-3" id="spreadsheetTechniques" style="display: none;">
+                <div class="row gy-3" id="spreadsheetTechniques" style="display: none">
 
                     <div class="col-md-12">
                         <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[0]?>">
@@ -161,7 +163,7 @@
             
             <div style="text-align: center">
                 <label for="submit" class="btn btn-success btn-xl">Sanitize</label>
-                <input type="submit" id="submit" style="display: none;">
+                <input type="submit" id="submit" style="display: none">
             </div>
         </form>
         
