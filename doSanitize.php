@@ -9,38 +9,34 @@
         <?php include "navbar.php"; ?>
 
         <?php
-        $files=array("wordFile", "textFile", "pasteText", "pdfFile", "excelFile");
-        $formatSelected=false;
-        foreach ($files as $value) {
-            if (!empty($_GET[$value])) {
-                $formatSelected=true;
-                $retrievedFilename=$_GET[$value];
-            }
-        }
-        if ($formatSelected==false) {
-            echo "error: the website has neither detected a file submitted or a file uploaded previously. <br>";
+        $fileSelected=true;
+        if (empty($_FILES["file"]["name"])) {
+            $fileSelected=false;
+            echo "error, it appears you have not selected a file to sanitize <br>";
         }
 
-        $techniques=array("characterMasking", "syntheticData", "dataPerturbation", "recordSurpression",
-        "generalisation", "pseudonymisation", "swapping", "attributeSurpression");
-        $techniqueSelected=false;
-        foreach ($techniques as $value) {
-            if (isset($_GET[$value])) {
-                $techniqueSelected=true;
-            }
-        }
-        if ($techniqueSelected==false) {
-            echo "error: it appears you have not made any selection on which technique you intend to use.";
+        $techniqueSelected=true;
+        if (!isset($_POST["technique"])) {
+            $techniqueSelected=False;
+            echo "error, it appears you have not selected a technique to use in sanitization";
         }
 
-        #if all goes well
-        if ($formatSelected and $techniqueSelected) {
-            echo "pass <br>";
-            print("filename: ".$retrievedFilename);  
+        #if all validation goes well above, form processing starts here
+        if ($fileSelected and $techniqueSelected) {
+            echo "input validation passed <br>";
+            
+            $file="file";
+            $intendedFileType=$_POST["extension"];
+            include "fileUpload";
         }
+
+        #this section is for pasteText testing for now it is empty
+        if (isset($_POST["pasteText"])) {}
         ?>
 
         <h1>WIP hashes</h1>
-        <h2>for now these are the hashes of the uploaded files, not the downloaded files<h2>
+        <h2>for now these are the hashes of the uploaded files, not the downloaded files</h2>
+
+        <a class="btn btn-primary btn-xl" href="sanitizerHome.php">return to home</a>
     </body>
 </html>

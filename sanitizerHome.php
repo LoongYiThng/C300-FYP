@@ -9,7 +9,7 @@
     <body>
         <?php include "navbar.php"; ?>
         
-        <form action="doSanitize.php" method="get">
+        <form enctype="multipart/form-data" action="doSanitize.php" method="post">
             <h1><strong>Choose how you want to get started</strong></h1>
 
             <div class="container">
@@ -23,9 +23,9 @@
                                 <p>Suitable for large microsoft documents<p>
                             </div>
                             <div class="card-footer">
-                                <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload">
-                                </i> choose docx file</label>
-                                <input type="file" id="wordFile" name="wordFile" accept=".docx" style="display: none;">
+                                <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"> </i> choose docx file</label>
+                                <input type="file" id="wordFile" name="file" accept=".docx" style="display: none;">
+                                <input type="hidden" id="wordFile" name="extension" value=".docx">
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,8 @@
                             </div>
                             <div class="card-footer">
                                 <label for="textFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose txt file</label>
-                                <input type="file" id="textFile" name="textFile" accept=".txt" style="display:none">
+                                <input type="file" id="textFile" name="file" accept=".txt" style="display:none">
+                                <input type="hidden" id="textFile" name="extension" value=".txt">
                             </div>
                         </div>
                     </div>
@@ -67,7 +68,8 @@
                             </div>
                             <div class="card-footer">
                                 <label for="pdfFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose pdf file</label>
-                                <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" style="display:none">
+                                <input type="file" id="pdfFile" name="file" accept=".pdf" style="display:none">
+                                <input type="hidden" id="pdfFile" name="extension" value=".pdf">
                             </div>
                         </div>
                     </div>
@@ -80,7 +82,8 @@
                             </div>
                             <div class="card-footer">
                                 <label for="excelFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose xlsx file</label>
-                                <input type="file" id="excelFile" name="excelFile" accept=".xlsx" style="display:none">
+                                <input type="file" id="excelFile" name="file" accept=".xlsx" style="display:none">
+                                <input type="hidden" id="excelFile" name="extension" value=".xlsx">
                             </div>
                         </div>
                     </div>
@@ -124,31 +127,35 @@
                 # these loops will break on an odd number of techniques in future
                 foreach ($language as $techniqueGroup) {
                 ?>
+
                 <div class="row gy-3" id="languageTechniques" style="display: none;">
                     
                     <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[0][0]?>">
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[0][0]?>">
                         <?php echo $techniqueGroup[0][1]?></label>
                     </div>
                     <div class="col-md-6">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[1][0]?>">
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[1][0]?>">
                         <?php echo $techniqueGroup[1][1] ?></label>
                     </div>
 
                 </div>
+
                 <?php
                 }
 
                 foreach ($spreadsheet as $techniqueGroup) {
                 ?>
+
                 <div class="row gy-3" id="spreadsheetTechniques" style="display: none;">
 
                     <div class="col-md-12">
-                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="<?php echo $techniqueGroup[0]?>">
+                        <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[0]?>">
                         <?php echo $techniqueGroup[1]?></label>
                     </div>
 
                 </div>
+
                 <?php } ?>
             </div>
             
