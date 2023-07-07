@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#wordFile, #textFile, #pasteText, #pdfFile").click(function(){
+    $(".language").click(function(){
         $("#notChosen").hide(500);
 
         $("#languageTechniques").show(500);
@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(".row + #spreadsheetTechniques").hide(500);
     });
 
-    $("#excelFile").click(function(){
+    $(".spreadsheet").click(function(){
         $("#notChosen").hide(500);
 
         $("#languageTechniques").hide(500);

@@ -7,95 +7,31 @@
         <link rel="stylesheet" href="stylesheets/sanitizerHome.css">
     </head>
     <body>
-        <?php include "navbar.php"; ?>
-        
+        <?php include "navbar.php" ?>
         <form enctype="multipart/form-data" action="doSanitize.php" method="post">
-            <input type="hidden" name="MAX_FILE_SIZE" value="500000000" />
             
+            <input type="hidden" name="MAX_FILE_SIZE" value="500000000" />
+
             <h1><strong>Choose how you want to get started</strong></h1>
+            <p>
+                have a look at this table containing all file types we support. then select the document type value in 
+                the button group below that matches your file type
+            </p>
+            
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary language">language</button>
+                <button type="button" class="btn btn-primary spreadsheet">spreadsheet</button>
+            </div>
 
-            <div class="container">
-                <div class="row gy-3">
-
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <i class="fas fa-file-word fa-6x"></i>
-                            <div class="card-body">
-                                <h2><strong>Upload a microsoft word file (.docx)</strong></h2>
-                                <p>Suitable for large microsoft documents<p>
-                            </div>
-                            <div class="card-footer">
-                                <label  for="wordFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"> </i> choose docx file</label>
-                                <input type="file" id="wordFile" name="file" accept=".docx" style="display: none">
-                                <input type="hidden" id="wordFile" name="extension" value=".docx">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <i class="fas fa-file-alt fa-6x"></i>
-                            <div class="card-body">
-                                <h2><strong>Upload a text file (.txt)</strong></h2>
-                                <p>Suitable for small files</p>
-                            </div>
-                            <div class="card-footer">
-                                <label for="textFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose txt file</label>
-                                <input type="file" id="textFile" name="file" accept=".txt" style="display: none">
-                                <input type="hidden" id="textFile" name="extension" value=".txt">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <i class="fas fa-paste fa-6x"></i>
-                            <div class="card-body">
-                                <h2><strong>Paste raw text</strong></h2>
-                                <p>Suitable for testing different sanitization techniques or extremely small strings of text</p>
-                            </div>
-                            <div class="card-footer">
-                                <label for="pasteText">paste text here:</label>
-                                <textarea class="form-control" id="pasteText" name="pasteText" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gy-3">
-                    
-                    <div class="col-md-6">
-                        <div class="card h-100">
-                            <i class="fas fa-file-pdf fa-6x"></i>
-                            <div class="card-body">
-                                <h2><strong>Upload a PDF file (.pdf)</strong></h2>
-                                <p>Suitable for large pdf files</p>
-                            </div>
-                            <div class="card-footer">
-                                <label for="pdfFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose pdf file</label>
-                                <input type="file" id="pdfFile" name="file" accept=".pdf" style="display: none">
-                                <input type="hidden" id="pdfFile" name="extension" value=".pdf">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card h-100">
-                            <i class="fas fa-file-excel fa-6x"></i>
-                            <div class="card-body">
-                                <h2><strong>Upload a excel file (.xlsx)</strong></h2>
-                                <p>Suitable for excel spreadsheet</p>
-                            </div>
-                            <div class="card-footer">
-                                <label for="excelFile" class="btn btn-primary btn-xl"><i class="fas fa-upload"></i> choose xlsx file</label>
-                                <input type="file" id="excelFile" name="file" accept=".xlsx" style="display: none">
-                                <input type="hidden" id="excelFile" name="extension" value=".xlsx">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="uploadBox">
+                <label for="fileUpload" class="form-label">select file to upload</label>
+                <input class="form-control" type="file" id="fileUpload" name="fileUpload" multiple>
             </div>
             
+           
             <h1><strong>Select a technique</strong></h1>
-            <h2 style="text-align: center;">You may choose one or more techniques for sanitization.</h2>
-            <p style="margin: 0px 20px 0px 20px;">
+            <h2>You may choose one or more techniques for sanitization.</h2>
+            <p>
                 <b>This section changes depending on your chosen file format above</b>. This is because different data types have 
                 their own applicable sanitization techniques. If you are not sure about which techniques to choose or how they 
                 work, try testing them with some sample input to the raw text field above or read more on the technique documentation 
@@ -165,8 +101,9 @@
                 <label for="submit" class="btn btn-success btn-xl">Sanitize</label>
                 <input type="submit" id="submit" style="display: none">
             </div>
+                
         </form>
         
-        <script src="javascript/sanitizerHome.js"></script>
+        <script src="sanitizerHome.js"></script>
     </body>
 </html>

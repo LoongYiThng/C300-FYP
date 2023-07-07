@@ -10,23 +10,6 @@
 
         <?php
         print_r($_FILES);
-        $techniqueSelected=true;
-        if (!isset($_POST["technique"])) {
-            $techniqueSelected=False;
-            echo "error, it appears you have not selected a technique to use in sanitization";
-        }
-
-        #if all validation goes well above, form processing starts here
-        if ($techniqueSelected) {
-            echo "input validation passed <br>";
-            
-            $file="file";
-            $intendedFileType=$_POST["extension"];
-            include "fileUpload.php";
-        }
-
-        #this section is for pasteText testing for now it is empty
-        if (isset($_POST["pasteText"])) {}
         ?>
 
         <h1>WIP hashes</h1>

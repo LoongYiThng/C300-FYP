@@ -1,3 +1,12 @@
+p {
+    margin: 0px 20px 0px 20px;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+
 /* styling for bootstrap grid system */
 div.container {
     padding: 50px 0px 50px;
