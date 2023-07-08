@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>do sanitize</title>
-        <?php include "design.php"; ?>
-    </head>
-    <body>
-        <?php include "navbar.php"; ?>
+<head>
+    <meta charset="UTF-8">
+    <title>do sanitize</title>
+    <?php include "design.php"; ?>
+</head>
+<body>
+    <?php include "navbar.php"; ?>
 
-        <?php
-        print_r($_FILES);
-        ?>
+    <?php
+    print_r($_FILES);
+    
+    #if ($_FILES['fileUpload']) {
+    #    foreach ($file_ary as $file) {
+    #        echo 'File Name: ' . $file['name'];
+    #        echo 'File Type: ' . $file['type'];
+    #        echo 'File Size: ' . $file['size'];
+    #    }
+    #}
+    ?>
 
-        <h1>WIP hashes</h1>
-        <h2>for now these are the hashes of the uploaded files, not the downloaded files</h2>
-
-        <a class="btn btn-primary btn-xl" href="sanitizerHome.php">return to home</a>
-    </body>
+    <a class="btn btn-primary btn-xl" href="sanitizerHome.php">return to home</a>
+</body>
 </html>

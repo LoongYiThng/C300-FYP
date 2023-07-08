@@ -7,6 +7,14 @@ h2 {
     text-align: center;
 }
 
+div.selectFile {
+    padding: 20px;
+}
+
+div.submitButton {
+    text-align: center;
+}
+
 /* styling for bootstrap grid system */
 div.container {
     padding: 50px 0px 50px;
