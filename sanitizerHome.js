@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $(".addFile").click(function(){
         $( ".uploadSlots" ).append(
-            "<input class= \"form-control\" type=\"file\" id=\"additionalSlot\" name=\"fileUpload[]\">"
+            "<input class=\"form-control\" type=\"file\" id=\"defaultSlot\" name=\"fileUpload[]\" accept=\".docx, .txt, .xlsx\">"
         );
     });
 

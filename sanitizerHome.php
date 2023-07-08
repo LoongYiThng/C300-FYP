@@ -55,7 +55,7 @@
                 <button class="btn btn-outline-danger clearFile" type="button">remove file slot</button>
             </div>
 
-            <input class="form-control" type="file" id="defaultSlot" name="fileUpload[]">
+            <input class="form-control" type="file" id="defaultSlot" name="fileUpload[]" accept=".docx, .txt, .xlsx">
 
             <div class="uploadSlots"></div>
         </div>
