@@ -9,7 +9,7 @@
     <?php include "navbar.php"; ?>
 
     <?php
-    print_r($_FILES);
+    echo '<pre>'; print_r($_FILES); echo '</pre>';
     
     #if ($_FILES['fileUpload']) {
     #    foreach ($file_ary as $file) {
