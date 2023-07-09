@@ -42,14 +42,14 @@
                 </tr>
             </tbody>
         </table>
-        
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <label for="typeLanguage"><button type="button" class="btn btn-primary language">language</button></label>
-            <input type="hidden" id="typeLanguage" name="dataType" value="language">
-            
-            <label for="typeSpreadsheet"
-            <button type="button" class="btn btn-primary spreadsheet">spreadsheet</button>
-            <input type="hidden" id="typeSpreadsheet" name="dataType" value="spreadsheet">
+
+        <div class="form-check">
+            <input class="form-check-input language" type="radio" name="dataType" id="dataTypeLanguage" value="language">
+            <label class="form-check-label" for="dataTypeLanguage">language</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input spreadsheet" type="radio" name="dataType" id="dataTypeSpreadsheet" value="spreadsheet">
+            <label class="form-check-label" for="dataTypeSpreadsheet">spreadsheet</label>
         </div>
 
         <div class="selectFile">
