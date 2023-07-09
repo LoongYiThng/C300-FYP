@@ -18,13 +18,13 @@ $(document).ready(function(){
     });
 
     $(".addFile").click(function(){
-        $( ".uploadSlots" ).append(
-            "<input class=\"form-control\" type=\"file\" id=\"defaultSlot\" name=\"fileUpload[]\" accept=\".docx, .txt, .xlsx\">"
+        $(".uploadSlots").append(
+            "<input class=\"form-control\" type=\"file\" id=\"additionalSlot\" name=\"fileUpload[]\" accept=\".docx, .txt, .xlsx\">"
         );
     });
 
 
     $(".clearFile").click(function(){
-        $( "#additionalSlot" ).remove();
+        $("#additionalSlot").remove();
     });
 })
