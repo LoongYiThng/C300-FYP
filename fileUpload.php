@@ -2,13 +2,14 @@
 # dependencies:
 # 1. the variable $file. which contains the name attribute of the input tag belonging to the file 
 # being uploaded
-# 2. the variable $intendedFileType
+# 2. the variable $fileIndex. which contains the numerical index position of the file in the $_FILES
+# 3. the variable $intendedFileType. which is the file extension of the file
 # without these dependencies this file upload script will not work
 
-$target_dir = "uploads/";
-$target_file = $target_dir.basename($_FILES[$file]["name"]);
+$targetDirectory = "uploads/";
+$targetFile = $targetDirectory.basename($_FILES[$file]["name"][$fileIndex]);
 $uploadOk = true;
-$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$fileType = strtolower(pathinfo($targetFile,PATHINFO_EXTENSION));
 
 $errorMessages = array(
     0 => 'There is no error, the file uploaded with success',
@@ -21,14 +22,12 @@ $errorMessages = array(
     8 => 'A PHP extension stopped the file upload.',
 );
 
-print_r($_FILES);
-
-if ($_FILES[$file]["error"]) {
-    echo $errorMessages[$_FILES[$file]["error"]];
+if ($_FILES[$file]["error"][$fileIndex]) {
+    echo $errorMessages[$_FILES[$file]["error"][$fileIndex]];
     $uploadOk=false;
 } else {
 
-    if ($_FILES[$file]["size"] > 500000000) {
+    if ($_FILES[$file]["size"][$fileIndex] > 500000000) {
         echo "Error, your file is too large. Only files that are 500kb or less are allowed";
         $uploadOk = false;
     }
@@ -39,12 +38,12 @@ if ($_FILES[$file]["error"]) {
     }
 
     if ($uploadOk == false) {
-    echo "Sorry, your file was not uploaded.";
+    echo "Sorry, your file was not uploaded. <br>";
 
     // if everything is ok, try to upload file
     } else {
-        if (move_uploaded_file($_FILES[$file]["tmp_name"], $target_file)) {
-            echo "The file ". htmlspecialchars(basename($_FILES[$file]["name"])). " has been uploaded.";
+        if (move_uploaded_file($_FILES[$file]["tmp_name"][$fileIndex], $targetFile)) {
+            echo "The file ". htmlspecialchars(basename($_FILES[$file]["name"][$fileIndex])). " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
