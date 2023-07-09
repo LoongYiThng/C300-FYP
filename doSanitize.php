@@ -12,20 +12,23 @@
     echo "<pre>"; print_r($_FILES); echo "</pre>"; 
     echo "<pre>"; print_r($_POST); echo "</pre>";
 
-    function uploadAllFiles() {
+    function uploadAllFiles($intendedFileType) {
         $file="fileUpload";
-        $intendedFileType=".docx";
         for($fileIndex=0, $size=count($_FILES[$file]["name"]); $fileIndex<$size; ++$fileIndex) {
             include "fileUpload.php";
         }
     }
 
-    if ($_POST["dataType"]=="language") {
-        $intendedFileType=".docx";
-        uploadAllFiles();
-    }elseif ($_POST["dataType"]=="spreadsheet") {
-        $intendedFileType=".xlsx";
-        uploadAllFiles();
+    if (!isset($_POST["dataType"])) {
+        echo "error, you have not selected a datatype.";
+    }elseif (!isset($_POST["technique"])) {
+        echo "error, you have not selected at least one technique.";
+    }else {
+        if ($_POST["dataType"]=="language") {
+            uploadAllFiles("docx");
+        }elseif ($_POST["dataType"]=="spreadsheet") {
+            uploadAllFiles("xlsx");
+        }
     }
     ?>
 

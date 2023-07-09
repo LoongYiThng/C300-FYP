@@ -28,12 +28,12 @@ if ($_FILES[$file]["error"][$fileIndex]) {
 } else {
 
     if ($_FILES[$file]["size"][$fileIndex] > 500000000) {
-        echo "Error, your file is too large. Only files that are 500kb or less are allowed";
+        echo "Error, your file is too large. Only files that are 500kb or less are allowed. ";
         $uploadOk = false;
     }
 
     if($fileType != $intendedFileType) {
-        echo "Error, only ".$intendedFileType." files are allowed.";
+        echo "Error, only ".$intendedFileType." files are allowed. ";
         $uploadOk = false;
     }
 
