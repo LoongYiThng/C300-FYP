@@ -9,9 +9,9 @@
     <?php include "navbar.php"; ?>
 
     <?php
-    echo '<pre>'; print_r($_FILES); echo '</pre>';
+    echo "<pre>"; print_r($_FILES); echo "</pre>";
     
-    
+    echo "<pre>"; print_r($_POST); echo "</pre>";
     ?>
 
     <a class="btn btn-primary btn-xl" href="sanitizerHome.php">return to home</a>

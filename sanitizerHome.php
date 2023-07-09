@@ -44,8 +44,12 @@
         </table>
         
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary language">language</button>
+            <label for="typeLanguage"><button type="button" class="btn btn-primary language">language</button></label>
+            <input type="hidden" id="typeLanguage" name="dataType" value="language">
+            
+            <label for="typeSpreadsheet"
             <button type="button" class="btn btn-primary spreadsheet">spreadsheet</button>
+            <input type="hidden" id="typeSpreadsheet" name="dataType" value="spreadsheet">
         </div>
 
         <div class="selectFile">
