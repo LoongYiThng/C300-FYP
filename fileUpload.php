@@ -42,7 +42,9 @@ if ($_FILES[$file]["error"][$fileIndex]) {
 
     // if everything is ok, try to upload file
     } else {
-        if (move_uploaded_file($_FILES[$file]["tmp_name"][$fileIndex], $targetFile)) {
+        $newFilename = tempnam($targetDirectory, "");
+        unlink($newFilename);
+        if (move_uploaded_file($_FILES[$file]["tmp_name"][$fileIndex], $newFilename)) {
             echo "The file ". htmlspecialchars(basename($_FILES[$file]["name"][$fileIndex])). " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
