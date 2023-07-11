@@ -116,7 +116,7 @@
                 </div>
 
                 <?php }else { ?>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
                         <?php echo $iteration[0] ?>
                     </label>
@@ -129,11 +129,11 @@
             }
 
             foreach ($language as $techniqueGroup) {
-                renderTechniques("languageTechniques", $language);
+                renderTechniques("languageTechniques", $techniqueGroup);
             }
 
             foreach ($spreadsheet as $techniqueGroup) {
-                renderTechniques("languageTechniques", $spreadsheet);
+                renderTechniques("spreadsheetTechniques", $techniqueGroup);
             }
             ?>
         </div>
