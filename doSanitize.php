@@ -25,9 +25,9 @@
         echo "error, you have not selected at least one technique.";
     }else {
         if ($_POST["dataType"]=="language") {
-            uploadAllFiles("docx");
+            uploadAllFiles(array("docx", "txt"));
         }elseif ($_POST["dataType"]=="spreadsheet") {
-            uploadAllFiles("xlsx");
+            uploadAllFiles(array("xlsx"));
         }
     }
     ?>
