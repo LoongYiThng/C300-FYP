@@ -21,7 +21,7 @@
 
     if (!isset($_POST["dataType"])) {
         echo "error, you have not selected a datatype.";
-    }elseif (!isset($_POST["technique"])) {
+    }elseif (!isset($_POST["techniques"])) {
         echo "error, you have not selected at least one technique.";
     }else {
         if ($_POST["dataType"]=="language") {
