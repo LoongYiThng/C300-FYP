@@ -33,10 +33,13 @@ if ($_FILES[$file]["error"][$fileIndex]) {
     }
 
     $unallowedFileTypeErrorMessage="";
-    $unallowedFileTypeFound=true;
+    $unallowedFileTypeFound=false;
     for ($i=0; $i<count($intendedFileType); $i++) {
         if ($fileType!=$intendedFileType[$i]) {
+            $unallowedFileTypeFound=true;
+        }elseif ($fileType==$intendedFileType[$i]) {
             $unallowedFileTypeFound=false;
+            break;
         }
         $unallowedFileTypeErrorMessage.=$intendedFileType[$i].", ";
     }
