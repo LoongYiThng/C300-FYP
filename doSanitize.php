@@ -14,9 +14,11 @@
 
     function uploadAllFiles($intendedFileType) {
         $file="fileUpload";
+        $results=array();
         for($fileIndex=0, $size=count($_FILES[$file]["name"]); $fileIndex<$size; ++$fileIndex) {
-            include "fileUpload.php";
+            array_push($results, include "fileUpload.php");
         }
+        return $results;
     }
 
     if (!isset($_POST["dataType"])) {
@@ -25,10 +27,13 @@
         echo "error, you have not selected at least one technique.";
     }else {
         if ($_POST["dataType"]=="language") {
-            uploadAllFiles(array("docx", "txt"));
+            $results=uploadAllFiles(array("docx", "txt"));
         }elseif ($_POST["dataType"]=="spreadsheet") {
-            uploadAllFiles(array("xlsx"));
+            $results=uploadAllFiles(array("xlsx"));
         }
+        echo "<pre>", print_r($results); echo "<pre>";
+
+        echo shell_exec("cd");
     }
     ?>
 

@@ -48,7 +48,6 @@ if ($_FILES[$file]["error"][$fileIndex]) {
         echo "filetype submitted: ".$fileType."<br>";
         $uploadOk=false;
     }
-    
 
     if ($uploadOk == false) {
     echo "Sorry, your file was not uploaded. <br>";
@@ -63,6 +62,8 @@ if ($_FILES[$file]["error"][$fileIndex]) {
             echo "Sorry, there was an error uploading your file. <br>";
         }
     }
+    
     echo "<br>";
+    return array($uploadOk, $newFilename);
 }
 ?>
