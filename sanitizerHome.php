@@ -89,57 +89,61 @@
 
             <?php
             $language=array(
-                array(array("characterMasking", "Character masking"), array("syntheticData", "Synthetic data")),
-                array(array("dataPerturbation", "Data perturbation"), array("recordSurpression", "Record surpression")),
-                array(array("generalisation", "Generalisation"), array("pseudonymisation", "Pseudonymisation")),
-                array(array("swapping", "Swapping"), array("attributeSurpression ", "Attribute surpression")),
+                array("character masking", "synthetic data"),
+                array("data perturbation", "record surpression"),
+                array("generalisation", "pseudonyzmization"),
+                array("swapping")
             );
             $spreadsheet=array(
-                array("data aggregation", "Data aggregation")
+                array("data aggregation")
             );
 
-            # these loops will break on an odd number of techniques in future
-            foreach ($language as $techniqueGroup) {
+            function renderTechniques($id, $iteration) {
             ?>
 
-            <div class="row gy-3" id="languageTechniques" style="display: none">
-                
+            <div class="row gy-3" id="<?php echo $id?>" style="display: none">
+            
+                <?php if (count($iteration)==2) {?>
                 <div class="col-md-6">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[0][0]?>">
-                    <?php echo $techniqueGroup[0][1]?></label>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
+                        <?php echo $iteration[0] ?>
+                    </label>
                 </div>
                 <div class="col-md-6">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[1][0]?>">
-                    <?php echo $techniqueGroup[1][1] ?></label>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[1] ?>">
+                        <?php echo $iteration[0] ?>
+                    </label>
                 </div>
+
+                <?php }else { ?>
+                <div class="col-md-12">
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
+                        <?php echo $iteration[0] ?>
+                    </label>
+                </div>
+                <?php } ?>
 
             </div>
 
-            <?php
+            <?php 
+            }
+
+            foreach ($language as $techniqueGroup) {
+                renderTechniques("languageTechniques", $techniqueGroup);
             }
 
             foreach ($spreadsheet as $techniqueGroup) {
+                renderTechniques("spreadsheetTechniques", $techniqueGroup);
+            }
             ?>
-
-            <div class="row gy-3" id="spreadsheetTechniques" style="display: none">
-
-                <div class="col-md-12">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="technique" value="<?php echo $techniqueGroup[0]?>">
-                    <?php echo $techniqueGroup[1]?></label>
-                </div>
-
-            </div>
-
-            <?php } ?>
         </div>
         
         <div class="submitButton">
             <label for="submit" class="btn btn-success btn-xl">Sanitize</label>
             <input type="submit" id="submit" style="display: none">
-        </div>
-            
+        </div> 
     </form>
-    
+
     <script src="sanitizerHome.js"></script>
-    </body>
+</body>
 </html>
