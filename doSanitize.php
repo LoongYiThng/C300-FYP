@@ -9,7 +9,7 @@
     <?php include "navbar.php"; ?>
 
     <?php
-    echo "<pre>"; print_r($_FILES); echo "</pre>"; 
+    echo "<pre>"; print_r($_FILES); echo "</pre>";
     echo "<pre>"; print_r($_POST); echo "</pre>";
 
     function uploadAllFiles($intendedFileType) {
@@ -23,9 +23,13 @@
 
     if (!isset($_POST["dataType"])) {
         echo "error, you have not selected a datatype.";
-    }elseif (!isset($_POST["techniques"])) {
+    }
+    if (!isset($_POST["techniques"])) {
         echo "error, you have not selected at least one technique.";
-    }else {
+    }
+
+    $allCheck=isset($_POST["datatype"]) and isset($_POST["techniques"]);
+    if ($allCheck) {
         if ($_POST["dataType"]=="language") {
             $results=uploadAllFiles(array("docx", "txt"));
         }elseif ($_POST["dataType"]=="spreadsheet") {
@@ -33,7 +37,11 @@
         }
         echo "<pre>", print_r($results); echo "<pre>";
 
-        echo shell_exec("cd");
+        foreach ($results as $upload) {
+            if ($upload[0]==true) {
+                echo shell_exec("cd");
+            }
+        }
     }
     ?>
 

@@ -6,6 +6,11 @@
 # 3. the variable $intendedFileType. which a list of all the allowed file extensions
 # without these dependencies this file upload script will not work
 
+# output:
+# this script will return an array with the first item being a boolean value indicating the success
+# or failure of the file upload. the second item is string which is the new unique filename stored in the 
+# upload folder 
+
 $targetDirectory = "uploads/";
 $targetFile = $targetDirectory.basename($_FILES[$file]["name"][$fileIndex]);
 $uploadOk = true;
