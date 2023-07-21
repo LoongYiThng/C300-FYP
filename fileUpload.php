@@ -8,8 +8,8 @@
 
 # output:
 # this script will return an array with the first item being a boolean value indicating the success
-# or failure of the file upload. the second item is string which is the new unique filename stored in the 
-# upload folder 
+# or failure of the file upload. the second item is a string which is the new unique filename stored
+# in the upload folder. the third item is a string which is the extension of the file
 
 $targetDirectory = "uploads/";
 $targetFile = $targetDirectory.basename($_FILES[$file]["name"][$fileIndex]);
@@ -65,10 +65,11 @@ if ($_FILES[$file]["error"][$fileIndex]) {
             echo "The file ". htmlspecialchars(basename($_FILES[$file]["name"][$fileIndex])). " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file. <br>";
+            $uploadOk=False;
         }
     }
     
     echo "<br>";
-    return array($uploadOk, $newFilename);
+    return array($uploadOk, $fileType, $newFilename);
 }
 ?>

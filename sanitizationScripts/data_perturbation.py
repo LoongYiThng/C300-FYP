@@ -4,7 +4,7 @@ import random
 import string
 from openpyxl import load_workbook
 
-if sys.argv[1]=="document":
+if sys.argv[1]=="docx":
     def perturb_data(text):
         perturbed_text = ''
         words = text.split()
@@ -62,7 +62,7 @@ if sys.argv[1]=="document":
         return perturbed_number
 
     # Open the Word document
-    doc = Document('test.docx')
+    doc = Document(sys.argv[2])
 
     # Process each paragraph in the document
     for paragraph in doc.paragraphs:
@@ -71,10 +71,10 @@ if sys.argv[1]=="document":
         paragraph.text = perturbed_text
 
     # Save the modified document
-    doc.save('perturbed.docx')
+    doc.save(sys.argv[2])
     print("Done! Check save folder")
 
-elif sys.argv[1]=="excel":
+elif sys.argv[1]=="xlsx":
     def perturb_string(string):
         perturbed_chars = []
         for char in string:
@@ -129,10 +129,10 @@ elif sys.argv[1]=="excel":
             perturb_numbers(sheet)
             perturb_phone_numbers(sheet)
             perturb_email_addresses(sheet)
-        workbook.save(f"perturbed_{filename}")
+        workbook.save(sys.argv[2])
 
 
     # Usage example
-    filename = "test.xlsx"
+    filename = sys.argv[2]
     perturb_xlsx_file(filename)
     print("Done")

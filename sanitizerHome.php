@@ -89,13 +89,13 @@
 
             <?php
             $language=array(
-                array("character masking", "synthetic data"),
-                array("data perturbation", "record surpression"),
+                array("character_masking", "synthetic_data"),
+                array("data_perturbation", "record_surpression"),
                 array("generalisation", "pseudonyzmization"),
                 array("swapping")
             );
             $spreadsheet=array(
-                array("data aggregation")
+                array("data_aggregation")
             );
 
             function renderTechniques($id, $iteration) {

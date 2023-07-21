@@ -28,18 +28,24 @@
         echo "error, you have not selected at least one technique.";
     }
 
-    $allCheck=isset($_POST["datatype"]) and isset($_POST["techniques"]);
+    $allCheck=isset($_POST["dataType"]) and isset($_POST["techniques"]);
     if ($allCheck) {
         if ($_POST["dataType"]=="language") {
             $results=uploadAllFiles(array("docx", "txt"));
         }elseif ($_POST["dataType"]=="spreadsheet") {
             $results=uploadAllFiles(array("xlsx"));
         }
-        echo "<pre>", print_r($results); echo "<pre>";
+        echo "<pre>"; print_r($results); echo "<pre>";
 
         foreach ($results as $upload) {
-            if ($upload[0]==true) {
-                echo shell_exec("cd");
+            if ($upload[0]) {
+                foreach ($_POST["techniques"] as $technique) {
+                    $commandLine="C:/Users/21005024/Anaconda3/python.exe sanitizationScripts/";
+                    $commandLine.=$technique." ";
+                    $commandLine.=$upload[1]." ";
+                    $commandLine.=$upload[2];
+                    echo $commandLine."<br>";
+                }
             }
         }
     }

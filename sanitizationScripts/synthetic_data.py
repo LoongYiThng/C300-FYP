@@ -2,13 +2,13 @@ import sys
 from faker import Faker
 from openpyxl import load_workbook
 
-if sys.argv[1]=="document":
+if sys.argv[1]=="docx":
     from docx import Document
 
     faker = Faker()
 
-    # Example original document
-    document = Document('test.docx')
+    # Open the original document
+    document = Document(sys.argv[2])
 
     # Function to sanitize text
     def sanitize_text(text):
@@ -28,14 +28,14 @@ if sys.argv[1]=="document":
         paragraph.text = sanitized_text
 
     # Save the sanitized document
-    document.save('synthetic.docx')
+    document.save(sys.argv[2])
     print("Done, Check save folder")
 
-elif sys.argv[1]=="excel":
+elif sys.argv[1]=="xlsx":
     faker = Faker()
 
-    # Example original XLSX file
-    filename = 'test.xlsx'
+    # Open the XLSX file
+    filename = sys.argv[2]
 
     # Function to sanitize data
     def sanitize_data(data):
@@ -63,6 +63,6 @@ elif sys.argv[1]=="excel":
                 cell.value = sanitize_data(cell.value)
 
     # Save the sanitized workbook
-    sanitized_filename = 'sanitized_' + filename
+    sanitized_filename = sys.argv[2]
     wb.save(sanitized_filename)
     print("Done")

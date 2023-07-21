@@ -3,7 +3,7 @@ import string
 import random
 from docx import Document
 
-if sys.argv[1]=="document":
+if sys.argv[1]=="docx":
     def mask_data(text):
         masked_text = ''
         words = text.split()
@@ -40,7 +40,7 @@ if sys.argv[1]=="document":
         return pseudonym
 
     # Open the Word document
-    doc = Document('test.docx')
+    doc = Document(sys.argv[2])
 
     # Process each paragraph in the document
     for paragraph in doc.paragraphs:
@@ -49,8 +49,8 @@ if sys.argv[1]=="document":
         paragraph.text = masked_text
 
     # Save the modified document
-    doc.save('pseudonyms.docx')
+    doc.save(sys.argv[2])
     print("Done! Check save folder.")
 
-elif sys.argv[1]=="excel":
+elif sys.argv[1]=="xlsx":
     pass
