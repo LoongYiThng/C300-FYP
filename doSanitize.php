@@ -18,6 +18,7 @@
         for($fileIndex=0, $size=count($_FILES[$file]["name"]); $fileIndex<$size; $fileIndex++) {
             array_push($results, include "fileUpload.php");
         }
+
         return $results;
     }
 
@@ -26,33 +27,31 @@
             "character_masking", "synthetic_data", "data_perturbation", "record_surpression",
             "generalisation", "pseudonyzmization", "swapping", "data_aggregation"
         );
-        
         foreach ($validTechniques as $technique) {
             if ($technique==$input) {
                 return true;
             }
         }
+
         return false;
     }
 
-    function sanitizeFile($uploadedFile) {
-        // if upload for individual file equals true
-        if ($uploadedFile[0]) {
-            foreach ($_POST["techniques"] as $technique) {
-                $commandLine="\"C:/Users/21005024/Anaconda3/python.exe\" ";
-                $commandLine.="sanitizationScripts/".$technique.".py ";
-                $commandLine.=$uploadedFile[1]." ";
-                $commandLine.=$uploadedFile[2];
-                echo $commandLine."<br>";
+    function executeScripts($upload) {
+        $success=false;
+        foreach ($_POST["techniques"] as $technique) {
+            $commandLine="\"C:/Users/21005024/Anaconda3/python.exe\" ";
+            $commandLine.="sanitizationScripts/".$technique.".py ";
+            $commandLine.=$upload[1]." ";
+            $commandLine.=$upload[2];
+            echo $commandLine."<br>";
 
-                if (noCommandInjection($technique)) {
-                    shell_exec($commandLine);
-                    return "sanitization success";
-                }else {
-                    return "sanitization fail";
-                }
+            if (noCommandInjection($technique)) {
+                shell_exec($commandLine);
+                $success=true;
             }
         }
+
+        return $success;
     }
 
     if (!isset($_POST["dataType"])) {
@@ -72,8 +71,13 @@
         echo "<pre>"; print_r($results); echo "<pre>";
 
         foreach ($results as $upload) {
-            sanitizeFile($upload);
-
+            // if upload success
+            if ($upload[0]) {
+                $executeResults=executeScripts($upload);
+                echo $executeResults;
+            
+            // if upload fail
+            }else {}
         }
     }
     
