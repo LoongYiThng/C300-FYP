@@ -37,21 +37,21 @@
     }
 
     function executeScripts($upload) {
-        $success=false;
+        $executeOutput="";
         foreach ($_POST["techniques"] as $technique) {
             $commandLine="\"C:/Users/21005024/Anaconda3/python.exe\" ";
             $commandLine.="sanitizationScripts/".$technique.".py ";
-            $commandLine.=$upload[1]." ";
-            $commandLine.=$upload[2];
+            $commandLine.=$upload["fileType"]." ";
+            $commandLine.=$upload["tempFileName"];
             echo $commandLine."<br>";
 
+            
             if (noCommandInjection($technique)) {
-                shell_exec($commandLine);
-                $success=true;
+                $executeOutput.=shell_exec($commandLine);
             }
         }
 
-        return $success;
+        return $executeOutput;
     }
 
     if (!isset($_POST["dataType"])) {
@@ -72,10 +72,11 @@
 
         foreach ($results as $upload) {
             // if upload success
-            if ($upload[0]) {
+            if ($upload["status"]) {
                 $executeResults=executeScripts($upload);
-                echo $executeResults;
-            
+                
+                
+
             // if upload fail
             }else {}
         }

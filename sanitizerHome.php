@@ -91,7 +91,7 @@
             $language=array(
                 array("character_masking", "synthetic_data"),
                 array("data_perturbation", "record_surpression"),
-                array("generalisation", "pseudonyzmization"),
+                array("generalisation", "pseudonymization"),
                 array("swapping")
             );
             $spreadsheet=array(
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md-6">
                     <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[1] ?>">
-                        <?php echo $iteration[0] ?>
+                        <?php echo $iteration[1] ?>
                     </label>
                 </div>
 
