@@ -18,29 +18,29 @@
             the button group below that matches your file type.
         </p>
         <table class="table table-bordered table-dark .table-responsive-sm">
-            <thead>
-                <tr>
-                    <th scope="col">file type</th>
-                    <th scope="col">file extension</th>
-                    <th scope="col">data type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">microsoft word</th>
-                    <td scope="row">.docx</td>
-                    <td rowspan="2">language</td>
-                </tr>
-                <tr>
-                    <td scope="row">text</th>
-                    <td scope="row">.txt</td>
-                </tr>
-                <tr>
-                    <td scope="row">microsoft excel</th>
-                    <td scope="row">.xlsx</td>
-                    <td scope="row">spreadsheet</td>
-                </tr>
-            </tbody>
+        <thead>
+            <tr>
+                <th scope="col">file type</th>
+                <th scope="col">file extension</th>
+                <th scope="col">data type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">microsoft word</th>
+                <td scope="row">.docx</td>
+                <td rowspan="2">language</td>
+            </tr>
+            <tr>
+                <td scope="row">text</th>
+                <td scope="row">.txt</td>
+            </tr>
+            <tr>
+                <td scope="row">microsoft excel</th>
+                <td scope="row">.xlsx</td>
+                <td scope="row">spreadsheet</td>
+            </tr>
+        </tbody>
         </table>
 
         <div class="form-check">
