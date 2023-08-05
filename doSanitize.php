@@ -141,7 +141,44 @@
 
     <?php
             // if upload fail
-            }else {}
+            }else {
+    ?>
+
+    <table class="table table-bordered table-dark .table-responsive-sm">
+    <thead>
+        <tr>
+            <th scope="row" colspan="2" style="text-align: center; font-size:large">file upload information</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" colspan="2" style="text-align: center; font-weight:normal">file metadata</th>
+        </tr>
+        <tr>
+            <th scope="row">uploaded file name</th>
+            <td><?php echo $upload["fileName"] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">file upload status</th>
+            <td><?php if ($upload["status"]) {echo "success";} else {echo "failed";}?></td>
+        </tr>
+        <tr>
+            <th scope="row">file size</th>
+            <td><?php echo $upload["fileSize"] ?></td>
+        </tr>
+
+        <tr>
+            <th scope="row" colspan="2" style="text-align: center; font-weight:normal">error messages</th>
+        </tr>
+        <tr>
+            <td scope="row" colspan="2"><?php echo $upload["additionalErrorMessages"] ?></td>
+        </tr>
+    </tbody>
+    </table>
+
+
+    <?php
+            }
         }
     }
     
