@@ -101,24 +101,24 @@
             function renderTechniques($id, $iteration) {
             ?>
 
-            <div class="row gy-3" id="<?php echo $id?>" style="display: none">
+            <div class="row gy-3" id="<?= $id?>" style="display: none">
             
                 <?php if (count($iteration)==2) {?>
                 <div class="col-md-6">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
-                        <?php echo $iteration[0] ?>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?= $iteration[0] ?>">
+                        <?= $iteration[0] ?>
                     </label>
                 </div>
                 <div class="col-md-6">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[1] ?>">
-                        <?php echo $iteration[1] ?>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?= $iteration[1] ?>">
+                        <?= $iteration[1] ?>
                     </label>
                 </div>
 
                 <?php }else { ?>
                 <div class="col-md-12">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
-                        <?php echo $iteration[0] ?>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?= $iteration[0] ?>">
+                        <?= $iteration[0] ?>
                     </label>
                 </div>
                 <?php } ?>
