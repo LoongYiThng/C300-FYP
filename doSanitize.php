@@ -99,7 +99,7 @@
         </tr>
         <tr>
             <th scope="row">uploaded file name</th>
-            <td><?php echo $upload["fileName"] ?></td>
+            <td><?= $upload["fileName"] ?></td>
         </tr>
         <tr>
             <th scope="row">file upload status</th>
@@ -107,7 +107,7 @@
         </tr>
         <tr>
             <th scope="row">file size</th>
-            <td><?php echo $upload["fileSize"] ?></td>
+            <td><?= $upload["fileSize"] ?></td>
         </tr>
 
         <tr>
@@ -115,26 +115,26 @@
         </tr>
         <tr>
             <th scope="row">md5 hash</th>
-            <td><?php echo hash_file("md5", $upload["tempFileName"]) ?></td>
+            <td><?= hash_file("md5", $upload["tempFileName"]) ?></td>
         </tr>
         <tr>
             <th scope="row">sha1 hash</th>
-            <td><?php echo hash_file("sha1", $upload["tempFileName"]) ?></td>
+            <td><?= hash_file("sha1", $upload["tempFileName"]) ?></td>
         </tr>
         <tr>
             <th scope="row">sha256 hash</th>
-            <td><?php echo hash_file("sha256", $upload["tempFileName"]) ?></td>
+            <td><?= hash_file("sha256", $upload["tempFileName"]) ?></td>
         </tr>
 
         <tr>
             <th scope="row" colspan="2" style="text-align: center; font-weight:normal">error messages</th>
         </tr>
         <tr>
-            <td scope="row" colspan="2"><?php echo $upload["additionalErrorMessages"] ?></td>
+            <td scope="row" colspan="2"><?= $upload["additionalErrorMessages"] ?></td>
         </tr>
 
         <tr>
-            <td colspan="2"><a href="<?php echo $downloadTempPath?>" class="btn btn-primary" role="button" download="<?php echo $downloadFileName?>"><i class="fas fa-download">download</a></td>
+            <td colspan="2"><a href="<?= $downloadTempPath?>" class="btn btn-primary" role="button" download="<?= $downloadFileName?>"><i class="fas fa-download">download</a></td>
         </tr>
     </tbody>
     </table>
@@ -156,7 +156,7 @@
         </tr>
         <tr>
             <th scope="row">uploaded file name</th>
-            <td><?php echo $upload["fileName"] ?></td>
+            <td><?= $upload["fileName"] ?></td>
         </tr>
         <tr>
             <th scope="row">file upload status</th>
@@ -164,14 +164,14 @@
         </tr>
         <tr>
             <th scope="row">file size</th>
-            <td><?php echo $upload["fileSize"] ?></td>
+            <td><?= $upload["fileSize"] ?></td>
         </tr>
 
         <tr>
             <th scope="row" colspan="2" style="text-align: center; font-weight:normal">error messages</th>
         </tr>
         <tr>
-            <td scope="row" colspan="2"><?php echo $upload["additionalErrorMessages"] ?></td>
+            <td scope="row" colspan="2"><?= $upload["additionalErrorMessages"]?></td>
         </tr>
     </tbody>
     </table>
