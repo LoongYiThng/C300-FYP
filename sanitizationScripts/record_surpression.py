@@ -2,7 +2,7 @@ import sys
 from docx import Document
 import re
 
-if sys.argv[1]=="document":
+if sys.argv[1]=="docx":
     regex={
         "email": "\S+@(\S+|\.\S+)",
         "age": "\d+\syears\sold",
@@ -27,10 +27,10 @@ if sys.argv[1]=="document":
         return sentence
 
     # open document
-    doc = Document("test.docx")
+    doc = Document(sys.argv[2])
 
     # sanitize
-    sanitized_doc=Document()
+    sanitized_doc=Document(sys.argv[2])
     output_paragraph=""
 
     for paragraph in doc.paragraphs:
@@ -47,8 +47,8 @@ if sys.argv[1]=="document":
         output_paragraph=""
 
     # output
-    sanitized_doc.save("surpressed.docx")
+    sanitized_doc.save(sys.argv[2])
     print("Done! check save folder")
 
-elif sys.argv[1]=="excel":
+elif sys.argv[1]=="xlsx":
     pass

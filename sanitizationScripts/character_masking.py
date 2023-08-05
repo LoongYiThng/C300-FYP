@@ -2,7 +2,7 @@ import sys
 from docx import Document
 from openpyxl import load_workbook
 
-if sys.argv[1]=="document":
+if sys.argv[1]=="docx":
     def mask_data(text):
         masked_text = ''
         words = text.split()
@@ -52,7 +52,7 @@ if sys.argv[1]=="document":
         return 'X' * len(number)
 
     # Open the Word document
-    doc = Document('test.docx')
+    doc = Document(sys.argv[2])
 
     # Process each paragraph in the document
     for paragraph in doc.paragraphs:
@@ -61,10 +61,10 @@ if sys.argv[1]=="document":
         paragraph.text = masked_text
 
     # Save the modified document
-    doc.save('masked.docx')
+    doc.save(sys.argv[2])
     print("Done! Check save folder")
 
-elif sys.argv[1]=="excel":
+elif sys.argv[1]=="xlsx":
     def mask_string(string):
         return '*' * len(string)
 
@@ -111,10 +111,10 @@ elif sys.argv[1]=="excel":
             mask_numbers(sheet)
             mask_phone_numbers(sheet)
             mask_email_addresses(sheet)
-        workbook.save(f"masked_{filename}")
+        workbook.save(sys.argv[2])
 
 
     # Usage example
-    filename = "test.xlsx"
+    filename = sys.argv[2]
     mask_xlsx_file(filename)
     print("Done")

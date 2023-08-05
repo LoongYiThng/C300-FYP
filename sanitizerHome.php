@@ -18,29 +18,29 @@
             the button group below that matches your file type.
         </p>
         <table class="table table-bordered table-dark .table-responsive-sm">
-            <thead>
-                <tr>
-                    <th scope="col">file type</th>
-                    <th scope="col">file extension</th>
-                    <th scope="col">data type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">microsoft word</th>
-                    <td scope="row">.docx</td>
-                    <td rowspan="2">language</td>
-                </tr>
-                <tr>
-                    <td scope="row">text</th>
-                    <td scope="row">.txt</td>
-                </tr>
-                <tr>
-                    <td scope="row">microsoft excel</th>
-                    <td scope="row">.xlsx</td>
-                    <td scope="row">spreadsheet</td>
-                </tr>
-            </tbody>
+        <thead>
+            <tr>
+                <th scope="col">file type</th>
+                <th scope="col">file extension</th>
+                <th scope="col">data type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">microsoft word</th>
+                <td scope="row">.docx</td>
+                <td rowspan="2">language</td>
+            </tr>
+            <tr>
+                <td scope="row">text</th>
+                <td scope="row">.txt</td>
+            </tr>
+            <tr>
+                <td scope="row">microsoft excel</th>
+                <td scope="row">.xlsx</td>
+                <td scope="row">spreadsheet</td>
+            </tr>
+        </tbody>
         </table>
 
         <div class="form-check">
@@ -89,36 +89,36 @@
 
             <?php
             $language=array(
-                array("character masking", "synthetic data"),
-                array("data perturbation", "record surpression"),
-                array("generalisation", "pseudonyzmization"),
+                array("character_masking", "synthetic_data"),
+                array("data_perturbation", "record_surpression"),
+                array("generalisation", "pseudonymization"),
                 array("swapping")
             );
             $spreadsheet=array(
-                array("data aggregation")
+                array("data_aggregation")
             );
 
             function renderTechniques($id, $iteration) {
             ?>
 
-            <div class="row gy-3" id="<?php echo $id?>" style="display: none">
+            <div class="row gy-3" id="<?= $id?>" style="display: none">
             
                 <?php if (count($iteration)==2) {?>
                 <div class="col-md-6">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
-                        <?php echo $iteration[0] ?>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?= $iteration[0] ?>">
+                        <?= $iteration[0] ?>
                     </label>
                 </div>
                 <div class="col-md-6">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[1] ?>">
-                        <?php echo $iteration[0] ?>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?= $iteration[1] ?>">
+                        <?= $iteration[1] ?>
                     </label>
                 </div>
 
                 <?php }else { ?>
                 <div class="col-md-12">
-                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?php echo $iteration[0] ?>">
-                        <?php echo $iteration[0] ?>
+                    <label class="btn btn-primary btn-xl"><input type="checkbox" name="techniques[]" value="<?= $iteration[0] ?>">
+                        <?= $iteration[0] ?>
                     </label>
                 </div>
                 <?php } ?>

@@ -2,7 +2,7 @@ import sys
 from docx import Document
 import re
 
-if sys.argv[1]=="document":
+if sys.argv[1]=="docx":
     regex={
         "age": "\d+\syears\sold",
         "money": "\$\d+(?:\,\d+|\d+)+(?:\.\d+)?",
@@ -39,7 +39,7 @@ if sys.argv[1]=="document":
         return sentence
 
     # open document
-    doc = Document("sanitizationScripts/test.docx")
+    doc = Document(sys.argv[2])
 
     # sanitize
     sanitized_doc=Document()
@@ -59,8 +59,8 @@ if sys.argv[1]=="document":
         output_paragraph=""
 
     # output
-    sanitized_doc.save("sanitizationScripts/generalized.docx")
+    sanitized_doc.save(sys.argv[2])
     print("Done! check save folder")
 
-elif sys.argv[1]=="excel":
+elif sys.argv[1]=="xlsx":
     pass
