@@ -34,7 +34,7 @@ if sys.argv[1]=="docx":
 elif sys.argv[1]=="xlsx":
     faker = Faker()
 
-    # Open the XLSX file
+    # Example original XLSX file
     filename = sys.argv[2]
 
     # Function to sanitize data
@@ -63,6 +63,5 @@ elif sys.argv[1]=="xlsx":
                 cell.value = sanitize_data(cell.value)
 
     # Save the sanitized workbook
-    sanitized_filename = sys.argv[2]
-    wb.save(sanitized_filename)
+    wb.save(filename)
     print("Done")

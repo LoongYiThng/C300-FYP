@@ -95,7 +95,10 @@
                 array("swapping")
             );
             $spreadsheet=array(
-                array("data_aggregation")
+                array("character_masking", "synthetic_data"),
+                array("data_perturbation", "data_aggregation"),
+                array("pseudonymization", "swapping"),
+                array("attribute_surppression", "tester")
             );
 
             function renderTechniques($id, $iteration) {
