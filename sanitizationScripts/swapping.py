@@ -68,4 +68,31 @@ if sys.argv[1]=="docx":
     print("Done! Check save folder.")
 
 elif sys.argv[1]=="xlsx":
-    pass
+    import pandas as pd
+    import re
+    df=pd.read_csv(sys.argv[2])
+
+    sanitized_df=pd.DataFrame()
+    sanitized_df = sanitized_df.reindex(columns=list(df.columns))
+    age_regex="old|age"
+    all_sensitive_columns=[]
+    new_column=[]
+
+    for column in df:
+        if re.match(age_regex, column):
+            all_sensitive_columns.append(column)
+
+    for sensitive_column in all_sensitive_columns:
+        new_column=df[sensitive_column]
+        
+        for index in range(0, len(new_column)):
+            new_value=float(new_column[index])
+            new_value=int(round(new_value, -1))
+            lower_range=new_value-10
+            upper_range=new_value+10
+            swap_value=str(lower_range)+"-"+str(upper_range)
+            new_column[index]=re.sub("\d{1,2}", swap_value, str(new_column[index]))
+
+        df[sensitive_column]=new_column
+
+    sanitized_df.to_excel(sys.argv[2])

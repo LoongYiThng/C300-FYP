@@ -46,4 +46,69 @@ if sys.argv[1]=="docx":
     print("Done! Check save folder.")
 
 elif sys.argv[1]=="xlsx":
-    pass
+    import os
+    import random
+    from openpyxl import load_workbook
+
+    def suppress_names(sheet):
+        for row in sheet.iter_rows():
+            for cell in row:
+                if isinstance(cell.value, str):
+                    words = cell.value.split()
+                    suppressed_words = ['X' * len(word) if word.isalpha() else word for word in words]
+                    suppressed_value = ' '.join(suppressed_words)
+                    cell.value = suppressed_value
+
+
+    def suppress_numbers(sheet):
+        for row in sheet.iter_rows():
+            for cell in row:
+                if isinstance(cell.value, (int, float)):
+                    cell.value = 'N/A'
+
+
+    def suppress_phone_numbers(sheet):
+        for row in sheet.iter_rows():
+            for cell in row:
+                if isinstance(cell.value, str) and any(char.isdigit() for char in cell.value):
+                    suppressed_value = ''.join('X' if char.isdigit() else char for char in cell.value)
+                    cell.value = suppressed_value
+
+
+    def suppress_email_addresses(sheet):
+        for row in sheet.iter_rows():
+            for cell in row:
+                if isinstance(cell.value, str) and '@' in cell.value:
+                    cell.value = 'X' * len(cell.value)
+
+
+    def suppress_attributes_xlsx_file(filename):
+        workbook = load_workbook(filename)
+        for sheet in workbook:
+            suppress_names(sheet)
+            suppress_numbers(sheet)
+            suppress_phone_numbers(sheet)
+            suppress_email_addresses(sheet)
+        save_filename=rename_file_extension(filename, ".tmp")
+        workbook.save(save_filename)
+        print("save: "+save_filename)
+
+    def rename_file_extension(old_filename, new_extension):
+        name, old_extension=os.path.splitext(old_filename)
+        new_filename=name+new_extension
+        os.rename(old_filename, new_filename)
+
+        return new_filename
+
+    # Usage example
+    filename = sys.argv[2]
+
+    old_file=filename
+    new_extension=".xlsx"
+    new_filename=rename_file_extension(old_file, new_extension)
+    print("old: "+old_file)
+    print("new: "+new_filename)
+    
+
+    suppress_attributes_xlsx_file(new_filename)
+    print("Done")

@@ -53,4 +53,27 @@ if sys.argv[1]=="docx":
     print("Done! Check save folder.")
 
 elif sys.argv[1]=="xlsx":
-    pass
+    import pandas as pd
+    import re
+    df=pd.read_csv(sys.argv[2])
+
+    sanitized_df=pd.DataFrame()
+    sanitized_df = sanitized_df.reindex(columns=list(df.columns))
+    new_value=""
+    new_row={}
+
+    age_regex="\d{1,3}(?:\.\d{1,3}){3}"
+    for rowIndex, row in df.iterrows():
+
+        for columnIndex, value in row.items():
+            value=str(value)
+            if re.search(age_regex, value):
+                new_value=re.sub(age_regex, "IP"+str(rowIndex), value)
+                new_row[str(columnIndex)]=new_value
+            else:
+                new_row[str(columnIndex)]=value
+
+        new_row=pd.Series(new_row)
+        sanitized_df=pd.concat([sanitized_df, new_row.to_frame().T], ignore_index=True)
+
+    sanitized_df.to_excel(sys.argv[2])
